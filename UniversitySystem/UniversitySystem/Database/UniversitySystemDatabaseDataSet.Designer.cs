@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace UniversitySystem {
+namespace UniversitySystem.Database {
     
     
     /// <summary>
@@ -780,7 +780,7 @@ namespace UniversitySystem {
         }
     }
 }
-namespace UniversitySystem.UniversitySystemDatabaseDataSetTableAdapters {
+namespace UniversitySystem.Database.UniversitySystemDatabaseDataSetTableAdapters {
     
     
     /// <summary>
