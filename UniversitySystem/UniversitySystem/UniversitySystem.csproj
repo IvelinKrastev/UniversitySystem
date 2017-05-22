@@ -111,12 +111,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\UniversitySystemDatabase.mdf">
+    <Content Include="Database\UniSystemDatabase.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Database\UniversitySystemDatabase_log.ldf">
+    <Content Include="Database\UniSystemDatabase_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>UniversitySystemDatabase.mdf</DependentUpon>
+      <DependentUpon>UniSystemDatabase.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
