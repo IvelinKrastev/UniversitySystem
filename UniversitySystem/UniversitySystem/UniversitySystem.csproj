@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UniversitySystem</RootNamespace>
     <AssemblyName>UniversitySystem</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <PublishUrl>publish\</PublishUrl>
@@ -27,6 +27,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -61,11 +62,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\LecturerWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\LecturerWindow.Designer.cs">
+      <DependentUpon>LecturerWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LogInLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LogInLecturer.Designer.cs">
+      <DependentUpon>LogInLecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LogInStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LogInStudent.Designer.cs">
+      <DependentUpon>LogInStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewGradeLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewGradeLecturer.Designer.cs">
+      <DependentUpon>NewGradeLecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StudentWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StudentWindow.Designer.cs">
+      <DependentUpon>StudentWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,8 +105,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UniversitySystemDatabaseDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LecturerWindow.resx">
+      <DependentUpon>LecturerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogInLecturer.resx">
+      <DependentUpon>LogInLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogInStudent.resx">
+      <DependentUpon>LogInStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewGradeLecturer.resx">
+      <DependentUpon>NewGradeLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StudentWindow.resx">
+      <DependentUpon>StudentWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,6 +131,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -123,6 +170,8 @@
       <DependentUpon>UniSystemDatabase.mdf</DependentUpon>
     </Content>
     <Content Include="Database_Data.txt" />
+    <None Include="Resources\teacher-icon-71137.png" />
+    <None Include="Resources\graduate-icon-7829.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

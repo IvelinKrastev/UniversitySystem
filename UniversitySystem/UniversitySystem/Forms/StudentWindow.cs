@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UniversitySystem
+namespace UniversitySystem.Forms
 {
-    public partial class Form1 : Form
+    public partial class StudentWindow : Form
     {
-        public Form1()
+        public StudentWindow()
         {
             InitializeComponent();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabStudentHome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
