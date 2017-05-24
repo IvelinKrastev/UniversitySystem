@@ -16,5 +16,15 @@ namespace UniversitySystem
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogInStudent_Load(object sender, EventArgs e)
+        {
+            pbLogInStudent.Image = UniversitySystem.Properties.Resources.Student;
+        }
     }
 }

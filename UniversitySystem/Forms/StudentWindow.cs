@@ -16,5 +16,15 @@ namespace UniversitySystem.Forms
         {
             InitializeComponent();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabStudentHome_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

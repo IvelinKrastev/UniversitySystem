@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UniversitySystem
+namespace UniversitySystem.Forms
 {
-    public partial class Form1 : Form
+    public partial class NewGradeLecturer : Form
     {
-        public Form1()
+        public NewGradeLecturer()
         {
             InitializeComponent();
+        }
+
+        private void NewGradeLecturer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
