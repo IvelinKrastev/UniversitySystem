@@ -3,6 +3,8 @@
 	2. 1601681010 - Mihail - Dimitrov - Panov - 9712041367 - Bulgarian - Bachelor - Software Techologies And Design - 1 - 1a - 1 - 1,2,3,4,5,6
 	3. 1501681049 - Ivana - Marinova - Mihailova - 9602201450 - Bulgarian - Bachelor - Software Techologies And Design - 2 - 2a - 2 - 7,8,9
 	4. 1501681059 - Konstantin - Trifinov - Ivanov - 9610154881 - Bulgarian - Bachelor - Software Techologies And Design - 2 - 2b - 2 - 7,8,9
+	5. 1401681001 - Milen - Minchev - Ivanchev - 9501091569 - Bulgarian - Bachelor - Software Technologies And Design - 3 - 1a - 3 - 10,11
+	6. 1301681089 - Martin - Marinov - Minchev - 9609291478 - Bulgarian - Bachelor - Software Technologies And Design - 4 - 3b - 4 - 12,13
 
 
 FROM TABLE [LECTURER]
@@ -15,14 +17,6 @@ FROM TABLE [LECTURER]
 	7. 200 - Assistant - Maria - Todorova - Karadocheva - 7911091331 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Lecturer_Pictures\Terzieva.jpg
 
 
-FROM TABLE [SHEDULES]
-	1. 1 - Software Technologies And Design - 1 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Shedules\STD_First_Course.pdf
-	2. 2 - Software Technologies And Design - 2 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Shedules\STD_Second_Course.pdf
-	3. 3 - Software Technologies And Design - 3 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Shedules\STD_Third_Course.pdf
-	4. 4 - Software Technologies And Design - 4 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Shedules\STD_Fourth_Course.pdf
-
-
-
 FROM TABLE [DISCIPLINES]
 	1. 1 - Introduction to Programming with C# - Software Technologies And Design - 1 - 123  
 	2. 2 - Introduction to IT - Software Technologies And Design - 1 - 124  
@@ -32,4 +26,28 @@ FROM TABLE [DISCIPLINES]
 	6. 6 - Object-Oriented Programming - Software Technologies And Design - 1 - 126  
 	7. 7 - Event Programming - Software Technologies And Design - 2 - 124  
 	8. 8 - Geometric Design - Software Technologies And Design - 2 - 129  
-	9. 9 - Databases - Software Technologies And Design - 2 - 126  
+	9. 9 - Databases - Software Technologies And Design - 2 - 126
+	10. 10 - Vector Images - Software Technologies And Design - 3 - 126  
+	11. 11 - Design Of Mobile Applications - Software Technologies And Design - 3 - 123  
+	12. 12 - Design Of 3D Models - Software Technologies And Design - 4 - 126  
+	13. 13 - Framework Systems For Web Programming - Software Technologies And Design - 4 - 126  
+	
+
+FROM TABLE [GRADES]
+	1. 1 - 1601681009 - Software Technologies And Design - 1 - 1a - 1 - 4.42 - 123  
+	2. 2 - 1601681010 - Software Technologies And Design - 1 - 1a - 1 - 5.69 - 123  
+	3. 3 - 1601681009 - Software Technologies And Design - 1 - 1a - 2 - 4.99 - 124  
+	4. 4 - 1601681010 - Software Technologies And Design - 1 - 1a - 2 - 5.87 - 124  
+	5. 5 - 1501681049 - Software Technologies And Design - 2 - 2a - 8 - 6 - 129  
+	6. 6 - 1501681059 - Software Technologies And Design - 2 - 2b - 8 - 5.25 - 129  
+	7. 7 - 1401681001 - Software Technologies And Design - 3 - 1a - 10 - 5.67 - 126  
+	8. 8 - 1401681001 - Software Technologies And Design - 3 - 1a - 11 - 5.89 - 123  
+	9. 9 - 1301681089 - Software Technologies And Design - 4 - 3b - 12 - 5 - 126  
+	10. 10 - 1301681089 - Software Technologies And Design - 4 - 3b - 13 - 3.9 - 126  
+
+
+FROM TABLE [SHEDULES]
+	1. 1 - Software Technologies And Design - 1 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Shedules\STD_First_Course.pdf
+	2. 2 - Software Technologies And Design - 2 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Shedules\STD_Second_Course.pdf
+	3. 3 - Software Technologies And Design - 3 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Shedules\STD_Third_Course.pdf
+	4. 4 - Software Technologies And Design - 4 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Shedules\STD_Fourth_Course.pdf
