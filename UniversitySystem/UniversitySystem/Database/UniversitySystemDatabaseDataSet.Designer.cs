@@ -36,11 +36,9 @@ namespace UniversitySystem.Database {
         
         private global::System.Data.DataRelation relationFK_Lecturer_Disciplines;
         
-        private global::System.Data.DataRelation relationFK_Student_Grades;
-        
         private global::System.Data.DataRelation relationFK_Lecturer_Grades;
         
-        private global::System.Data.DataRelation relationFK_Disciplines_Student;
+        private global::System.Data.DataRelation relationFK_Student_Grades;
         
         private global::System.Data.DataRelation relationFK_Shedules_Student;
         
@@ -301,9 +299,8 @@ namespace UniversitySystem.Database {
                 }
             }
             this.relationFK_Lecturer_Disciplines = this.Relations["FK_Lecturer_Disciplines"];
-            this.relationFK_Student_Grades = this.Relations["FK_Student_Grades"];
             this.relationFK_Lecturer_Grades = this.Relations["FK_Lecturer_Grades"];
-            this.relationFK_Disciplines_Student = this.Relations["FK_Disciplines_Student"];
+            this.relationFK_Student_Grades = this.Relations["FK_Student_Grades"];
             this.relationFK_Shedules_Student = this.Relations["FK_Shedules_Student"];
         }
         
@@ -333,13 +330,6 @@ namespace UniversitySystem.Database {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_Student_Grades", new global::System.Data.DataColumn[] {
-                        this.tableStudent.Faculty_NumberColumn}, new global::System.Data.DataColumn[] {
-                        this.tableGrades.Faculty_NumberColumn});
-            this.tableGrades.Constraints.Add(fkc);
-            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
-            fkc.DeleteRule = global::System.Data.Rule.Cascade;
-            fkc.UpdateRule = global::System.Data.Rule.Cascade;
             fkc = new global::System.Data.ForeignKeyConstraint("FK_Lecturer_Grades", new global::System.Data.DataColumn[] {
                         this.tableLecturer.Work_NumberColumn}, new global::System.Data.DataColumn[] {
                         this.tableGrades.Lecturer_Work_NumberColumn});
@@ -347,10 +337,10 @@ namespace UniversitySystem.Database {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_Disciplines_Student", new global::System.Data.DataColumn[] {
-                        this.tableDisciplines.Discipline_IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableStudent.Discipline_IdColumn});
-            this.tableStudent.Constraints.Add(fkc);
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_Student_Grades", new global::System.Data.DataColumn[] {
+                        this.tableStudent.Faculty_NumberColumn}, new global::System.Data.DataColumn[] {
+                        this.tableGrades.Faculty_NumberColumn});
+            this.tableGrades.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.Cascade;
@@ -365,18 +355,14 @@ namespace UniversitySystem.Database {
                         this.tableLecturer.Work_NumberColumn}, new global::System.Data.DataColumn[] {
                         this.tableDisciplines.Lecturer_Work_NumberColumn}, false);
             this.Relations.Add(this.relationFK_Lecturer_Disciplines);
-            this.relationFK_Student_Grades = new global::System.Data.DataRelation("FK_Student_Grades", new global::System.Data.DataColumn[] {
-                        this.tableStudent.Faculty_NumberColumn}, new global::System.Data.DataColumn[] {
-                        this.tableGrades.Faculty_NumberColumn}, false);
-            this.Relations.Add(this.relationFK_Student_Grades);
             this.relationFK_Lecturer_Grades = new global::System.Data.DataRelation("FK_Lecturer_Grades", new global::System.Data.DataColumn[] {
                         this.tableLecturer.Work_NumberColumn}, new global::System.Data.DataColumn[] {
                         this.tableGrades.Lecturer_Work_NumberColumn}, false);
             this.Relations.Add(this.relationFK_Lecturer_Grades);
-            this.relationFK_Disciplines_Student = new global::System.Data.DataRelation("FK_Disciplines_Student", new global::System.Data.DataColumn[] {
-                        this.tableDisciplines.Discipline_IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableStudent.Discipline_IdColumn}, false);
-            this.Relations.Add(this.relationFK_Disciplines_Student);
+            this.relationFK_Student_Grades = new global::System.Data.DataRelation("FK_Student_Grades", new global::System.Data.DataColumn[] {
+                        this.tableStudent.Faculty_NumberColumn}, new global::System.Data.DataColumn[] {
+                        this.tableGrades.Faculty_NumberColumn}, false);
+            this.Relations.Add(this.relationFK_Student_Grades);
             this.relationFK_Shedules_Student = new global::System.Data.DataRelation("FK_Shedules_Student", new global::System.Data.DataColumn[] {
                         this.tableShedules.Shedule_IdColumn}, new global::System.Data.DataColumn[] {
                         this.tableStudent.Shedule_IdColumn}, false);
@@ -2039,7 +2025,7 @@ namespace UniversitySystem.Database {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public StudentRow AddStudentRow(string Faculty_Number, string First_Name, string Middle_Name, string Last_Name, string Personal_Id, string Nationality, string Degree, string Specialty, int Course, string Group, ShedulesRow parentShedulesRowByFK_Shedules_Student, DisciplinesRow parentDisciplinesRowByFK_Disciplines_Student) {
+            public StudentRow AddStudentRow(string Faculty_Number, string First_Name, string Middle_Name, string Last_Name, string Personal_Id, string Nationality, string Degree, string Specialty, int Course, string Group, ShedulesRow parentShedulesRowByFK_Shedules_Student, int Discipline_Id) {
                 StudentRow rowStudentRow = ((StudentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Faculty_Number,
@@ -2053,12 +2039,9 @@ namespace UniversitySystem.Database {
                         Course,
                         Group,
                         null,
-                        null};
+                        Discipline_Id};
                 if ((parentShedulesRowByFK_Shedules_Student != null)) {
                     columnValuesArray[10] = parentShedulesRowByFK_Shedules_Student[0];
-                }
-                if ((parentDisciplinesRowByFK_Disciplines_Student != null)) {
-                    columnValuesArray[11] = parentDisciplinesRowByFK_Disciplines_Student[0];
                 }
                 rowStudentRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStudentRow);
@@ -2359,17 +2342,6 @@ namespace UniversitySystem.Database {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Lecturer_Disciplines"]);
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public StudentRow[] GetStudentRows() {
-                if ((this.Table.ChildRelations["FK_Disciplines_Student"] == null)) {
-                    return new StudentRow[0];
-                }
-                else {
-                    return ((StudentRow[])(base.GetChildRows(this.Table.ChildRelations["FK_Disciplines_Student"])));
-                }
-            }
         }
         
         /// <summary>
@@ -2476,23 +2448,23 @@ namespace UniversitySystem.Database {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public StudentRow StudentRow {
-                get {
-                    return ((StudentRow)(this.GetParentRow(this.Table.ParentRelations["FK_Student_Grades"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Student_Grades"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public LecturerRow LecturerRow {
                 get {
                     return ((LecturerRow)(this.GetParentRow(this.Table.ParentRelations["FK_Lecturer_Grades"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Lecturer_Grades"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public StudentRow StudentRow {
+                get {
+                    return ((StudentRow)(this.GetParentRow(this.Table.ParentRelations["FK_Student_Grades"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Student_Grades"]);
                 }
             }
         }
@@ -2824,17 +2796,6 @@ namespace UniversitySystem.Database {
                 }
                 set {
                     this[this.tableStudent.Discipline_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DisciplinesRow DisciplinesRow {
-                get {
-                    return ((DisciplinesRow)(this.GetParentRow(this.Table.ParentRelations["FK_Disciplines_Student"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Disciplines_Student"]);
                 }
             }
             
@@ -5555,24 +5516,6 @@ SELECT Faculty_Number, First_Name, Middle_Name, Last_Name, Personal_Id, National
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(UniversitySystemDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._lecturerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Lecturer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._lecturerTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._disciplinesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Disciplines.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._disciplinesTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._shedulesTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Shedules.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -5582,12 +5525,30 @@ SELECT Faculty_Number, First_Name, Middle_Name, Last_Name, Personal_Id, National
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._lecturerTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Lecturer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._lecturerTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._studentTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Student.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._studentTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._disciplinesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Disciplines.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._disciplinesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -5610,22 +5571,6 @@ SELECT Faculty_Number, First_Name, Middle_Name, Last_Name, Personal_Id, National
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(UniversitySystemDatabaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._lecturerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Lecturer.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._lecturerTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._disciplinesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Disciplines.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._disciplinesTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._shedulesTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Shedules.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -5634,11 +5579,27 @@ SELECT Faculty_Number, First_Name, Middle_Name, Last_Name, Personal_Id, National
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._lecturerTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Lecturer.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._lecturerTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._studentTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Student.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._studentTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._disciplinesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Disciplines.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._disciplinesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -5668,22 +5629,6 @@ SELECT Faculty_Number, First_Name, Middle_Name, Last_Name, Personal_Id, National
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._studentTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Student.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._studentTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._shedulesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Shedules.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._shedulesTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._disciplinesTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Disciplines.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -5692,11 +5637,27 @@ SELECT Faculty_Number, First_Name, Middle_Name, Last_Name, Personal_Id, National
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._studentTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Student.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._studentTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._lecturerTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Lecturer.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._lecturerTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._shedulesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Shedules.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._shedulesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
