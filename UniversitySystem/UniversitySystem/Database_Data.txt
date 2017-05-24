@@ -9,6 +9,10 @@ FROM TABLE [LECTURER]
 	1. 123 - PhD - Ivan - Ivanov - Valkov - 7710121460 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Lecturers\Valkov.jpg
 	2. 124 - Docent - Kiril - Kirilov - Baikalov - 7208175780 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Lecturers\Baikalov.jpg
 	3. 125 - Professor - Mincho - Ivelinov - Angelov - 6812051888 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Lecturer_Pictures\Angelov.jpg
+	4. 126 - PhD - Todorka - Trendafilova - Tyankova - 6701012551 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Lecturer_Pictures\Tyankova.jpg
+	5. 129 - PhD - Kaloyan - Minchev - Ivailov - 7109061782 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Lecturer_Pictures\Ivailov.jpg
+	6. 134 - Professor - Anton - Atanasov - Anastasov - 6208221026 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Lecturer_Pictures\Anastasov.jpg
+	7. 200 - Assistant - Maria - Todorova - Karadocheva - 7911091331 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Lecturer_Pictures\Terzieva.jpg
 
 
 FROM TABLE [SHEDULES]

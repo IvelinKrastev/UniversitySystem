@@ -39,6 +39,7 @@
             // 
             // pbLecturer
             // 
+            this.pbLecturer.Image = global::UniversitySystem.Properties.Resources.Lecturer;
             this.pbLecturer.Location = new System.Drawing.Point(28, 62);
             this.pbLecturer.Name = "pbLecturer";
             this.pbLecturer.Size = new System.Drawing.Size(121, 120);
@@ -49,6 +50,7 @@
             // 
             // pbStudent
             // 
+            this.pbStudent.Image = global::UniversitySystem.Properties.Resources.Student;
             this.pbStudent.Location = new System.Drawing.Point(238, 62);
             this.pbStudent.Name = "pbStudent";
             this.pbStudent.Size = new System.Drawing.Size(121, 120);

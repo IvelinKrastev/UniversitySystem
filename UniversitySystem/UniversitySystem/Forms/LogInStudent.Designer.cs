@@ -40,6 +40,7 @@
             // 
             // pbLogInStudent
             // 
+            this.pbLogInStudent.Image = global::UniversitySystem.Properties.Resources.Student;
             this.pbLogInStudent.Location = new System.Drawing.Point(76, 12);
             this.pbLogInStudent.Name = "pbLogInStudent";
             this.pbLogInStudent.Size = new System.Drawing.Size(128, 97);
@@ -48,16 +49,16 @@
             // 
             // tbFNumberStudent
             // 
-            this.tbFNumberStudent.Location = new System.Drawing.Point(76, 137);
+            this.tbFNumberStudent.Location = new System.Drawing.Point(63, 137);
             this.tbFNumberStudent.Name = "tbFNumberStudent";
-            this.tbFNumberStudent.Size = new System.Drawing.Size(128, 20);
+            this.tbFNumberStudent.Size = new System.Drawing.Size(161, 20);
             this.tbFNumberStudent.TabIndex = 1;
             // 
             // tbIDNumberStudent
             // 
-            this.tbIDNumberStudent.Location = new System.Drawing.Point(76, 189);
+            this.tbIDNumberStudent.Location = new System.Drawing.Point(63, 189);
             this.tbIDNumberStudent.Name = "tbIDNumberStudent";
-            this.tbIDNumberStudent.Size = new System.Drawing.Size(128, 20);
+            this.tbIDNumberStudent.Size = new System.Drawing.Size(161, 20);
             this.tbIDNumberStudent.TabIndex = 2;
             // 
             // label1

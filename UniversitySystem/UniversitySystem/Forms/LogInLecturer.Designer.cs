@@ -76,16 +76,16 @@
             // 
             // tbPasswordLecturer
             // 
-            this.tbPasswordLecturer.Location = new System.Drawing.Point(77, 189);
+            this.tbPasswordLecturer.Location = new System.Drawing.Point(64, 189);
             this.tbPasswordLecturer.Name = "tbPasswordLecturer";
-            this.tbPasswordLecturer.Size = new System.Drawing.Size(128, 20);
+            this.tbPasswordLecturer.Size = new System.Drawing.Size(161, 20);
             this.tbPasswordLecturer.TabIndex = 9;
             // 
             // tbIDLecturer
             // 
-            this.tbIDLecturer.Location = new System.Drawing.Point(77, 137);
+            this.tbIDLecturer.Location = new System.Drawing.Point(64, 137);
             this.tbIDLecturer.Name = "tbIDLecturer";
-            this.tbIDLecturer.Size = new System.Drawing.Size(128, 20);
+            this.tbIDLecturer.Size = new System.Drawing.Size(161, 20);
             this.tbIDLecturer.TabIndex = 8;
             // 
             // pbLecturer
