@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using UniversitySystem.Forms;
 
 namespace UniversitySystem
 {
@@ -16,36 +10,24 @@ namespace UniversitySystem
         {
             InitializeComponent();
         }
+        Form openForm;
 
-        private void Welcome_Load(object sender, EventArgs e)
-        {
-            pbLecturer.Image = UniversitySystem.Properties.Resources.Lecturer;
-            pbStudent.Image = UniversitySystem.Properties.Resources.Student;
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // PICTURE BOX LECTURER CLICK EVENT.
         private void pbLecturer_Click(object sender, EventArgs e)
         {
+            openForm = new LogInLecturer();
+            openForm.Show();
 
+            Hide();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        // PICTURE BOX STUDENT CLICK EVENT.
+        private void pbStudent_Click(object sender, EventArgs e)
         {
+            openForm = new LogInStudent();
+            openForm.Show();
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            Hide();
         }
     }
 }

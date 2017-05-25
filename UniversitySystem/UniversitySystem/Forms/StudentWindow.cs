@@ -26,5 +26,10 @@ namespace UniversitySystem.Forms
         {
 
         }
+
+        private void btnLogOutStudent_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

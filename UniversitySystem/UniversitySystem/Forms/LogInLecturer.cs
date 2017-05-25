@@ -21,5 +21,28 @@ namespace UniversitySystem.Forms
         {
 
         }
+
+        private void tbIDLecturer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPasswordLecturer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogInLecturer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBackLecturer_Click(object sender, EventArgs e)
+        {
+            Form f = new Welcome();
+            f.Show();
+
+            Hide();
+        }
     }
 }

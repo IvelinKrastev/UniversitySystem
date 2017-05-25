@@ -28,71 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btLogInLecturer = new System.Windows.Forms.Button();
-            this.btBackLecturer = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInLecturer));
+            this.btnLogInLecturer = new System.Windows.Forms.Button();
+            this.btnBackLecturer = new System.Windows.Forms.Button();
+            this.lblIDTxt = new System.Windows.Forms.Label();
+            this.lblPassTxt = new System.Windows.Forms.Label();
             this.tbPasswordLecturer = new System.Windows.Forms.TextBox();
             this.tbIDLecturer = new System.Windows.Forms.TextBox();
             this.pbLecturer = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbLecturer)).BeginInit();
             this.SuspendLayout();
             // 
-            // btLogInLecturer
+            // btnLogInLecturer
             // 
-            this.btLogInLecturer.Location = new System.Drawing.Point(197, 236);
-            this.btLogInLecturer.Name = "btLogInLecturer";
-            this.btLogInLecturer.Size = new System.Drawing.Size(75, 23);
-            this.btLogInLecturer.TabIndex = 13;
-            this.btLogInLecturer.Text = "Log in";
-            this.btLogInLecturer.UseVisualStyleBackColor = true;
+            this.btnLogInLecturer.BackColor = System.Drawing.Color.LightGray;
+            this.btnLogInLecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogInLecturer.Location = new System.Drawing.Point(223, 278);
+            this.btnLogInLecturer.Name = "btnLogInLecturer";
+            this.btnLogInLecturer.Size = new System.Drawing.Size(98, 42);
+            this.btnLogInLecturer.TabIndex = 13;
+            this.btnLogInLecturer.Text = "Log in";
+            this.btnLogInLecturer.UseVisualStyleBackColor = false;
+            this.btnLogInLecturer.Click += new System.EventHandler(this.btnLogInLecturer_Click);
             // 
-            // btBackLecturer
+            // btnBackLecturer
             // 
-            this.btBackLecturer.Location = new System.Drawing.Point(12, 236);
-            this.btBackLecturer.Name = "btBackLecturer";
-            this.btBackLecturer.Size = new System.Drawing.Size(75, 23);
-            this.btBackLecturer.TabIndex = 12;
-            this.btBackLecturer.Text = "Back";
-            this.btBackLecturer.UseVisualStyleBackColor = true;
+            this.btnBackLecturer.BackColor = System.Drawing.Color.LightGray;
+            this.btnBackLecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackLecturer.Location = new System.Drawing.Point(12, 278);
+            this.btnBackLecturer.Name = "btnBackLecturer";
+            this.btnBackLecturer.Size = new System.Drawing.Size(98, 42);
+            this.btnBackLecturer.TabIndex = 12;
+            this.btnBackLecturer.Text = "Back";
+            this.btnBackLecturer.UseVisualStyleBackColor = false;
+            this.btnBackLecturer.Click += new System.EventHandler(this.btnBackLecturer_Click);
             // 
-            // label2
+            // lblIDTxt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 13);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Identification Number (EGN)";
+            this.lblIDTxt.AutoSize = true;
+            this.lblIDTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDTxt.Location = new System.Drawing.Point(82, 142);
+            this.lblIDTxt.Name = "lblIDTxt";
+            this.lblIDTxt.Size = new System.Drawing.Size(161, 15);
+            this.lblIDTxt.TabIndex = 11;
+            this.lblIDTxt.Text = "Identification Number (EGN)";
             // 
-            // label1
+            // lblPassTxt
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(116, 173);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Password:";
+            this.lblPassTxt.AutoSize = true;
+            this.lblPassTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassTxt.Location = new System.Drawing.Point(134, 196);
+            this.lblPassTxt.Name = "lblPassTxt";
+            this.lblPassTxt.Size = new System.Drawing.Size(64, 15);
+            this.lblPassTxt.TabIndex = 10;
+            this.lblPassTxt.Text = "Password:";
             // 
             // tbPasswordLecturer
             // 
-            this.tbPasswordLecturer.Location = new System.Drawing.Point(64, 189);
+            this.tbPasswordLecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPasswordLecturer.Location = new System.Drawing.Point(82, 214);
             this.tbPasswordLecturer.Name = "tbPasswordLecturer";
-            this.tbPasswordLecturer.Size = new System.Drawing.Size(161, 20);
+            this.tbPasswordLecturer.Size = new System.Drawing.Size(161, 21);
             this.tbPasswordLecturer.TabIndex = 9;
+            this.tbPasswordLecturer.TextChanged += new System.EventHandler(this.tbPasswordLecturer_TextChanged);
             // 
             // tbIDLecturer
             // 
-            this.tbIDLecturer.Location = new System.Drawing.Point(64, 137);
+            this.tbIDLecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbIDLecturer.Location = new System.Drawing.Point(82, 160);
             this.tbIDLecturer.Name = "tbIDLecturer";
-            this.tbIDLecturer.Size = new System.Drawing.Size(161, 20);
+            this.tbIDLecturer.Size = new System.Drawing.Size(161, 21);
             this.tbIDLecturer.TabIndex = 8;
+            this.tbIDLecturer.TextChanged += new System.EventHandler(this.tbIDLecturer_TextChanged);
             // 
             // pbLecturer
             // 
-            this.pbLecturer.Location = new System.Drawing.Point(77, 12);
+            this.pbLecturer.Image = global::UniversitySystem.Properties.Resources.Lecturer;
+            this.pbLecturer.Location = new System.Drawing.Point(97, 12);
             this.pbLecturer.Name = "pbLecturer";
-            this.pbLecturer.Size = new System.Drawing.Size(128, 97);
+            this.pbLecturer.Size = new System.Drawing.Size(136, 112);
+            this.pbLecturer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLecturer.TabIndex = 7;
             this.pbLecturer.TabStop = false;
             // 
@@ -100,16 +115,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.btLogInLecturer);
-            this.Controls.Add(this.btBackLecturer);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(333, 332);
+            this.Controls.Add(this.btnLogInLecturer);
+            this.Controls.Add(this.btnBackLecturer);
+            this.Controls.Add(this.lblIDTxt);
+            this.Controls.Add(this.lblPassTxt);
             this.Controls.Add(this.tbPasswordLecturer);
             this.Controls.Add(this.tbIDLecturer);
             this.Controls.Add(this.pbLecturer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "LogInLecturer";
-            this.Text = "LogInLecturer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Log In As A Lecturer";
             this.Load += new System.EventHandler(this.LogInLecturer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLecturer)).EndInit();
             this.ResumeLayout(false);
@@ -119,10 +139,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btLogInLecturer;
-        private System.Windows.Forms.Button btBackLecturer;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnLogInLecturer;
+        private System.Windows.Forms.Button btnBackLecturer;
+        private System.Windows.Forms.Label lblIDTxt;
+        private System.Windows.Forms.Label lblPassTxt;
         private System.Windows.Forms.TextBox tbPasswordLecturer;
         private System.Windows.Forms.TextBox tbIDLecturer;
         private System.Windows.Forms.PictureBox pbLecturer;
