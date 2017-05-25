@@ -28,28 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LecturerWindow));
             this.tabLecturer = new System.Windows.Forms.TabControl();
             this.tabLecturerHome = new System.Windows.Forms.TabPage();
-            this.tabLecturerStudentAssessments = new System.Windows.Forms.TabPage();
-            this.btLogOutLecturer = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbLecturerName = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbScientificDegreeLecturer = new System.Windows.Forms.Label();
             this.lbLecturerDisciplines = new System.Windows.Forms.ListBox();
+            this.lbScientificDegreeLecturer = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbLecturerName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabLecturerStudentAssessments = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tb = new System.Windows.Forms.TextBox();
             this.tab = new System.Windows.Forms.TabPage();
             this.tbWorkScheduleLecturer = new System.Windows.Forms.TableLayoutPanel();
-            this.tb = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btLogOutLecturer = new System.Windows.Forms.Button();
             this.btAddGradeLecturer = new System.Windows.Forms.Button();
             this.tabLecturer.SuspendLayout();
             this.tabLecturerHome.SuspendLayout();
-            this.tabLecturerStudentAssessments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabLecturerStudentAssessments.SuspendLayout();
             this.tab.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +81,58 @@
             this.tabLecturerHome.Text = "Home";
             this.tabLecturerHome.UseVisualStyleBackColor = true;
             // 
+            // lbLecturerDisciplines
+            // 
+            this.lbLecturerDisciplines.FormattingEnabled = true;
+            this.lbLecturerDisciplines.Location = new System.Drawing.Point(227, 6);
+            this.lbLecturerDisciplines.Name = "lbLecturerDisciplines";
+            this.lbLecturerDisciplines.Size = new System.Drawing.Size(225, 277);
+            this.lbLecturerDisciplines.TabIndex = 8;
+            // 
+            // lbScientificDegreeLecturer
+            // 
+            this.lbScientificDegreeLecturer.AutoSize = true;
+            this.lbScientificDegreeLecturer.Location = new System.Drawing.Point(119, 161);
+            this.lbScientificDegreeLecturer.Name = "lbScientificDegreeLecturer";
+            this.lbScientificDegreeLecturer.Size = new System.Drawing.Size(35, 13);
+            this.lbScientificDegreeLecturer.TabIndex = 7;
+            this.lbScientificDegreeLecturer.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 161);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Scientific Degree:";
+            // 
+            // lbLecturerName
+            // 
+            this.lbLecturerName.AutoSize = true;
+            this.lbLecturerName.Location = new System.Drawing.Point(119, 137);
+            this.lbLecturerName.Name = "lbLecturerName";
+            this.lbLecturerName.Size = new System.Drawing.Size(35, 13);
+            this.lbLecturerName.TabIndex = 5;
+            this.lbLecturerName.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 137);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Name:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(8, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(146, 114);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // tabLecturerStudentAssessments
             // 
             this.tabLecturerStudentAssessments.Controls.Add(this.label4);
@@ -95,66 +148,45 @@
             this.tabLecturerStudentAssessments.Text = "Student Assessments";
             this.tabLecturerStudentAssessments.UseVisualStyleBackColor = true;
             // 
-            // btLogOutLecturer
+            // label4
             // 
-            this.btLogOutLecturer.Location = new System.Drawing.Point(387, 322);
-            this.btLogOutLecturer.Name = "btLogOutLecturer";
-            this.btLogOutLecturer.Size = new System.Drawing.Size(75, 23);
-            this.btLogOutLecturer.TabIndex = 2;
-            this.btLogOutLecturer.Text = "Log out";
-            this.btLogOutLecturer.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(304, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Grade:";
             // 
-            // pictureBox1
+            // textBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(8, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 114);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.textBox1.Location = new System.Drawing.Point(349, 6);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 3;
             // 
-            // label1
+            // listBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 137);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Name:";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(3, 32);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(449, 212);
+            this.listBox1.TabIndex = 2;
             // 
-            // lbLecturerName
+            // label2
             // 
-            this.lbLecturerName.AutoSize = true;
-            this.lbLecturerName.Location = new System.Drawing.Point(119, 137);
-            this.lbLecturerName.Name = "lbLecturerName";
-            this.lbLecturerName.Size = new System.Drawing.Size(35, 13);
-            this.lbLecturerName.TabIndex = 5;
-            this.lbLecturerName.Text = "label2";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Faculty Number:";
             // 
-            // label3
+            // tb
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 161);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Scientific Degree:";
-            // 
-            // lbScientificDegreeLecturer
-            // 
-            this.lbScientificDegreeLecturer.AutoSize = true;
-            this.lbScientificDegreeLecturer.Location = new System.Drawing.Point(119, 161);
-            this.lbScientificDegreeLecturer.Name = "lbScientificDegreeLecturer";
-            this.lbScientificDegreeLecturer.Size = new System.Drawing.Size(35, 13);
-            this.lbScientificDegreeLecturer.TabIndex = 7;
-            this.lbScientificDegreeLecturer.Text = "label4";
-            // 
-            // lbLecturerDisciplines
-            // 
-            this.lbLecturerDisciplines.FormattingEnabled = true;
-            this.lbLecturerDisciplines.Location = new System.Drawing.Point(227, 6);
-            this.lbLecturerDisciplines.Name = "lbLecturerDisciplines";
-            this.lbLecturerDisciplines.Size = new System.Drawing.Size(225, 277);
-            this.lbLecturerDisciplines.TabIndex = 8;
+            this.tb.Location = new System.Drawing.Point(98, 6);
+            this.tb.Name = "tb";
+            this.tb.Size = new System.Drawing.Size(100, 20);
+            this.tb.TabIndex = 0;
             // 
             // tab
             // 
@@ -181,72 +213,47 @@
             this.tbWorkScheduleLecturer.Size = new System.Drawing.Size(449, 281);
             this.tbWorkScheduleLecturer.TabIndex = 3;
             // 
-            // tb
+            // btLogOutLecturer
             // 
-            this.tb.Location = new System.Drawing.Point(98, 6);
-            this.tb.Name = "tb";
-            this.tb.Size = new System.Drawing.Size(100, 20);
-            this.tb.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Faculty Number:";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(3, 32);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(449, 212);
-            this.listBox1.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(349, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(304, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Grade:";
+            this.btLogOutLecturer.BackColor = System.Drawing.Color.LightGray;
+            this.btLogOutLecturer.Location = new System.Drawing.Point(387, 322);
+            this.btLogOutLecturer.Name = "btLogOutLecturer";
+            this.btLogOutLecturer.Size = new System.Drawing.Size(75, 23);
+            this.btLogOutLecturer.TabIndex = 2;
+            this.btLogOutLecturer.Text = "Log out";
+            this.btLogOutLecturer.UseVisualStyleBackColor = false;
             // 
             // btAddGradeLecturer
             // 
+            this.btAddGradeLecturer.BackColor = System.Drawing.Color.LightGray;
             this.btAddGradeLecturer.Location = new System.Drawing.Point(12, 322);
             this.btAddGradeLecturer.Name = "btAddGradeLecturer";
             this.btAddGradeLecturer.Size = new System.Drawing.Size(75, 23);
             this.btAddGradeLecturer.TabIndex = 3;
             this.btAddGradeLecturer.Text = "Add Grade";
-            this.btAddGradeLecturer.UseVisualStyleBackColor = true;
+            this.btAddGradeLecturer.UseVisualStyleBackColor = false;
             // 
             // LecturerWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(465, 355);
             this.Controls.Add(this.btAddGradeLecturer);
             this.Controls.Add(this.btLogOutLecturer);
             this.Controls.Add(this.tabLecturer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LecturerWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LecturerWindow";
             this.Load += new System.EventHandler(this.LecturerWindow_Load);
             this.tabLecturer.ResumeLayout(false);
             this.tabLecturerHome.ResumeLayout(false);
             this.tabLecturerHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabLecturerStudentAssessments.ResumeLayout(false);
             this.tabLecturerStudentAssessments.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tab.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -311,7 +311,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(441, 268);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(477, 270);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // StudentWindow

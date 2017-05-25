@@ -62,6 +62,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Student.cs" />
+    <Compile Include="Classes\User.cs" />
     <Compile Include="Forms\LecturerWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,7 +188,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
     <Folder Include="Lecturer_Pictures\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
