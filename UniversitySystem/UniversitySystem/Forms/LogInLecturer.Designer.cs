@@ -86,7 +86,7 @@
             // tbPasswordLecturer
             // 
             this.tbPasswordLecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPasswordLecturer.Location = new System.Drawing.Point(82, 214);
+            this.tbPasswordLecturer.Location = new System.Drawing.Point(84, 214);
             this.tbPasswordLecturer.Name = "tbPasswordLecturer";
             this.tbPasswordLecturer.Size = new System.Drawing.Size(161, 21);
             this.tbPasswordLecturer.TabIndex = 9;
@@ -95,7 +95,7 @@
             // tbIDLecturer
             // 
             this.tbIDLecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbIDLecturer.Location = new System.Drawing.Point(82, 160);
+            this.tbIDLecturer.Location = new System.Drawing.Point(84, 160);
             this.tbIDLecturer.Name = "tbIDLecturer";
             this.tbIDLecturer.Size = new System.Drawing.Size(161, 21);
             this.tbIDLecturer.TabIndex = 8;
@@ -130,6 +130,7 @@
             this.Name = "LogInLecturer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log In As A Lecturer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogInLecturer_FormClosing);
             this.Load += new System.EventHandler(this.LogInLecturer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLecturer)).EndInit();
             this.ResumeLayout(false);

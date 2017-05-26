@@ -32,8 +32,8 @@
             this.pbLogInStudent = new System.Windows.Forms.PictureBox();
             this.tbFNumberStudent = new System.Windows.Forms.TextBox();
             this.tbIDNumberStudent = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblFacNumberTxt = new System.Windows.Forms.Label();
+            this.lblIdTxt = new System.Windows.Forms.Label();
             this.btBackStudent = new System.Windows.Forms.Button();
             this.btLogInStudent = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogInStudent)).BeginInit();
@@ -64,26 +64,25 @@
             this.tbIDNumberStudent.Size = new System.Drawing.Size(161, 21);
             this.tbIDNumberStudent.TabIndex = 2;
             // 
-            // label1
+            // lblFacNumberTxt
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(117, 142);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Faculty Number:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblFacNumberTxt.AutoSize = true;
+            this.lblFacNumberTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFacNumberTxt.Location = new System.Drawing.Point(117, 142);
+            this.lblFacNumberTxt.Name = "lblFacNumberTxt";
+            this.lblFacNumberTxt.Size = new System.Drawing.Size(96, 15);
+            this.lblFacNumberTxt.TabIndex = 3;
+            this.lblFacNumberTxt.Text = "Faculty Number:";
             // 
-            // label2
+            // lblIdTxt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(84, 196);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 15);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Identification Number (EGN)";
+            this.lblIdTxt.AutoSize = true;
+            this.lblIdTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdTxt.Location = new System.Drawing.Point(84, 196);
+            this.lblIdTxt.Name = "lblIdTxt";
+            this.lblIdTxt.Size = new System.Drawing.Size(161, 15);
+            this.lblIdTxt.TabIndex = 4;
+            this.lblIdTxt.Text = "Identification Number (EGN)";
             // 
             // btBackStudent
             // 
@@ -95,6 +94,7 @@
             this.btBackStudent.TabIndex = 5;
             this.btBackStudent.Text = "Back";
             this.btBackStudent.UseVisualStyleBackColor = false;
+            this.btBackStudent.Click += new System.EventHandler(this.btBackStudent_Click);
             // 
             // btLogInStudent
             // 
@@ -116,8 +116,8 @@
             this.ClientSize = new System.Drawing.Size(333, 332);
             this.Controls.Add(this.btLogInStudent);
             this.Controls.Add(this.btBackStudent);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblIdTxt);
+            this.Controls.Add(this.lblFacNumberTxt);
             this.Controls.Add(this.tbIDNumberStudent);
             this.Controls.Add(this.tbFNumberStudent);
             this.Controls.Add(this.pbLogInStudent);
@@ -127,6 +127,7 @@
             this.Name = "LogInStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log In As A Student";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogInStudent_FormClosing);
             this.Load += new System.EventHandler(this.LogInStudent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogInStudent)).EndInit();
             this.ResumeLayout(false);
@@ -139,8 +140,8 @@
         private System.Windows.Forms.PictureBox pbLogInStudent;
         private System.Windows.Forms.TextBox tbFNumberStudent;
         private System.Windows.Forms.TextBox tbIDNumberStudent;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblFacNumberTxt;
+        private System.Windows.Forms.Label lblIdTxt;
         private System.Windows.Forms.Button btBackStudent;
         private System.Windows.Forms.Button btLogInStudent;
     }

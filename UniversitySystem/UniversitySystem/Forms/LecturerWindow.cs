@@ -21,18 +21,9 @@ namespace UniversitySystem.Forms
         {
 
         }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void tbWorkScheduleLecturer_Paint(object sender, PaintEventArgs e)
-        {
-            tbWorkScheduleLecturer.
-        }
-
-        private void label5_Click(object sender, EventArgs e)
         {
 
         }

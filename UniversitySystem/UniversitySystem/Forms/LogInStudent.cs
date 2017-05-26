@@ -13,48 +13,60 @@ namespace UniversitySystem
 {
     public partial class LogInStudent : Form
     {
-        List<string> StudentFnumbers = new List<string>();
-        List<string> StudentIDs = new List<string>();
         public LogInStudent()
         {
             InitializeComponent();
         }
+        List<string> StudentFacNumbers = new List<string>();
+        List<string> StudentIDs = new List<string>();
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        Form welcome = new Welcome();
 
         private void LogInStudent_Load(object sender, EventArgs e)
         {
-            pbLogInStudent.Image = UniversitySystem.Properties.Resources.Student;
         }
+
 
         private void btLogInStudent_Click(object sender, EventArgs e)
         {
-            if (tbFNumberStudent.Text != string.Empty && tbIDNumberStudent.Text != string.Empty)
+            if (tbFNumberStudent.Text != string.Empty && tbFNumberStudent.Text.Length != 10 && 
+                tbIDNumberStudent.Text != string.Empty)
             {
-
-                for (int i = 0; i < StudentFnumbers.Count; i++)
+                for (int i = 0; i < StudentFacNumbers.Count; i++)
                 {
-                    if (tbFNumberStudent.Text == StudentFnumbers[i] && tbIDNumberStudent.Text == StudentIDs[i])
+                    if (tbFNumberStudent.Text == StudentFacNumbers[i] && tbIDNumberStudent.Text == StudentIDs[i])
                     {
                         StudentWindow sw = new StudentWindow();
-                        sw.ShowDialog();
-                        this.Close();
-                        
+                        sw.Show();
+
+                        Hide();
                     }
-                    else if (i == StudentFnumbers.Count - 1)
+                    else if (i == StudentFacNumbers.Count - 1)
                     {
                         MessageBox.Show("Incorrect Username/Password");
                     }
                 }
-
             }
             else
             {
-                MessageBox.Show("Please enter a Username/Password!");
+                MessageBox.Show("Please enter a correct Username/Password!");
             }
+        }
+
+        // BACK BUTTON CLICK EVENT.
+        private void btBackStudent_Click(object sender, EventArgs e)
+        {
+            welcome.Show();
+
+            Hide();
+        }
+
+        // FORM CLOSING EVENT.
+        private void LogInStudent_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            welcome.Show();
+
+            Hide();
         }
     }
 }

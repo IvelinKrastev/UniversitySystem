@@ -17,11 +17,12 @@ namespace UniversitySystem.Forms
         {
             InitializeComponent();
         }
+        Form welcome = new Welcome();
 
         // LOGIN LECTURER FORM LOAD EVENT.
         private void LogInLecturer_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         // TEXT BOX ID TEXT CHANGED EVENT.
@@ -47,7 +48,7 @@ namespace UniversitySystem.Forms
                 DBConnect.Open();
                 MessageBox.Show("Account Created");
 
-                
+
             }
             catch (Exception ex)
             {
@@ -58,8 +59,15 @@ namespace UniversitySystem.Forms
         // BTN BACK CLICK EVENT.
         private void btnBackLecturer_Click(object sender, EventArgs e)
         {
-            Form f = new Welcome();
-            f.Show();
+            welcome.Show();
+
+            Hide();
+        }
+
+        // FORM CLOSING EVENT.
+        private void LogInLecturer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            welcome.Show();
 
             Hide();
         }

@@ -29,5 +29,12 @@ namespace UniversitySystem
 
             Hide();
         }
+
+        // FORM CLOSING EVENT.
+        private void Welcome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            GC.Collect();
+            Environment.Exit(1);
+        }
     }
 }
