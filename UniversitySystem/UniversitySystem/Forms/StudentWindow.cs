@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UniversitySystem.Classes;
 
 namespace UniversitySystem.Forms
 {
@@ -30,6 +31,17 @@ namespace UniversitySystem.Forms
         private void btnLogOutStudent_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StudentWindow_Load(object sender, EventArgs e)
+        {
+
+            
         }
     }
 }

@@ -52,11 +52,12 @@
             this.lbAssessmentsStudent = new System.Windows.Forms.ListBox();
             this.tabStudentSchedule = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabStudent.SuspendLayout();
             this.tabStudentHome.SuspendLayout();
             this.tabStudentAssessments.SuspendLayout();
             this.tabStudentSchedule.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabStudent
@@ -69,7 +70,7 @@
             this.tabStudent.Location = new System.Drawing.Point(0, 0);
             this.tabStudent.Name = "tabStudent";
             this.tabStudent.SelectedIndex = 0;
-            this.tabStudent.Size = new System.Drawing.Size(499, 366);
+            this.tabStudent.Size = new System.Drawing.Size(465, 341);
             this.tabStudent.TabIndex = 0;
             // 
             // tabStudentHome
@@ -94,7 +95,7 @@
             this.tabStudentHome.Location = new System.Drawing.Point(4, 22);
             this.tabStudentHome.Name = "tabStudentHome";
             this.tabStudentHome.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStudentHome.Size = new System.Drawing.Size(491, 340);
+            this.tabStudentHome.Size = new System.Drawing.Size(457, 315);
             this.tabStudentHome.TabIndex = 0;
             this.tabStudentHome.Text = "Home";
             this.tabStudentHome.Click += new System.EventHandler(this.tabStudentHome_Click);
@@ -103,7 +104,7 @@
             // 
             this.btnLogOutStudent.BackColor = System.Drawing.Color.LightGray;
             this.btnLogOutStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOutStudent.Location = new System.Drawing.Point(387, 292);
+            this.btnLogOutStudent.Location = new System.Drawing.Point(342, 252);
             this.btnLogOutStudent.Name = "btnLogOutStudent";
             this.btnLogOutStudent.Size = new System.Drawing.Size(98, 42);
             this.btnLogOutStudent.TabIndex = 15;
@@ -132,7 +133,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(211, 18);
+            this.listBox1.Location = new System.Drawing.Point(221, 18);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(223, 160);
             this.listBox1.TabIndex = 12;
@@ -254,7 +255,7 @@
             this.tabStudentAssessments.Location = new System.Drawing.Point(4, 22);
             this.tabStudentAssessments.Name = "tabStudentAssessments";
             this.tabStudentAssessments.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStudentAssessments.Size = new System.Drawing.Size(491, 340);
+            this.tabStudentAssessments.Size = new System.Drawing.Size(457, 315);
             this.tabStudentAssessments.TabIndex = 1;
             this.tabStudentAssessments.Text = "Assessments";
             // 
@@ -262,7 +263,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.LightGray;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(387, 292);
+            this.button1.Location = new System.Drawing.Point(340, 251);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 42);
             this.button1.TabIndex = 16;
@@ -274,19 +275,19 @@
             this.lbAssessmentsStudent.FormattingEnabled = true;
             this.lbAssessmentsStudent.Location = new System.Drawing.Point(3, 3);
             this.lbAssessmentsStudent.Name = "lbAssessmentsStudent";
-            this.lbAssessmentsStudent.Size = new System.Drawing.Size(452, 277);
+            this.lbAssessmentsStudent.Size = new System.Drawing.Size(448, 303);
             this.lbAssessmentsStudent.TabIndex = 0;
             // 
             // tabStudentSchedule
             // 
             this.tabStudentSchedule.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabStudentSchedule.Controls.Add(this.pictureBox1);
             this.tabStudentSchedule.Controls.Add(this.button2);
-            this.tabStudentSchedule.Controls.Add(this.tableLayoutPanel1);
             this.tabStudentSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabStudentSchedule.Location = new System.Drawing.Point(4, 22);
             this.tabStudentSchedule.Name = "tabStudentSchedule";
             this.tabStudentSchedule.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStudentSchedule.Size = new System.Drawing.Size(491, 340);
+            this.tabStudentSchedule.Size = new System.Drawing.Size(457, 315);
             this.tabStudentSchedule.TabIndex = 2;
             this.tabStudentSchedule.Text = "Schedule";
             // 
@@ -294,32 +295,28 @@
             // 
             this.button2.BackColor = System.Drawing.Color.LightGray;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(387, 292);
+            this.button2.Location = new System.Drawing.Point(351, 265);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 42);
             this.button2.TabIndex = 17;
             this.button2.Text = "Log Out";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // tableLayoutPanel1
+            // pictureBox1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(8, 6);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(477, 270);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(441, 256);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
             // 
             // StudentWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(499, 366);
+            this.ClientSize = new System.Drawing.Size(465, 341);
             this.Controls.Add(this.tabStudent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -327,11 +324,13 @@
             this.Name = "StudentWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentWindow";
+            this.Load += new System.EventHandler(this.StudentWindow_Load);
             this.tabStudent.ResumeLayout(false);
             this.tabStudentHome.ResumeLayout(false);
             this.tabStudentHome.PerformLayout();
             this.tabStudentAssessments.ResumeLayout(false);
             this.tabStudentSchedule.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,9 +357,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox lbAssessmentsStudent;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnLogOutStudent;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
