@@ -11,14 +11,6 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
 
         #region Windows Form Designer generated code
 
@@ -46,13 +38,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tb = new System.Windows.Forms.TextBox();
             this.tab = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tbWorkScheduleLecturer = new System.Windows.Forms.TableLayoutPanel();
             this.tabLecturer.SuspendLayout();
             this.tabLecturerHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabLecturerStudentAssessments.SuspendLayout();
             this.tab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabLecturer
@@ -64,7 +55,7 @@
             this.tabLecturer.Location = new System.Drawing.Point(0, 0);
             this.tabLecturer.Name = "tabLecturer";
             this.tabLecturer.SelectedIndex = 0;
-            this.tabLecturer.Size = new System.Drawing.Size(452, 312);
+            this.tabLecturer.Size = new System.Drawing.Size(521, 353);
             this.tabLecturer.TabIndex = 0;
             // 
             // tabLecturerHome
@@ -81,15 +72,14 @@
             this.tabLecturerHome.Location = new System.Drawing.Point(4, 22);
             this.tabLecturerHome.Name = "tabLecturerHome";
             this.tabLecturerHome.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLecturerHome.Size = new System.Drawing.Size(444, 286);
+            this.tabLecturerHome.Size = new System.Drawing.Size(513, 327);
             this.tabLecturerHome.TabIndex = 0;
             this.tabLecturerHome.Text = "Home";
-            this.tabLecturerHome.Click += new System.EventHandler(this.tabLecturerHome_Click);
             // 
             // btnAddGradeLecturer
             // 
             this.btnAddGradeLecturer.BackColor = System.Drawing.Color.LightGray;
-            this.btnAddGradeLecturer.Location = new System.Drawing.Point(12, 248);
+            this.btnAddGradeLecturer.Location = new System.Drawing.Point(12, 261);
             this.btnAddGradeLecturer.Name = "btnAddGradeLecturer";
             this.btnAddGradeLecturer.Size = new System.Drawing.Size(75, 23);
             this.btnAddGradeLecturer.TabIndex = 3;
@@ -99,7 +89,7 @@
             // lbLecturerDisciplines
             // 
             this.lbLecturerDisciplines.FormattingEnabled = true;
-            this.lbLecturerDisciplines.Location = new System.Drawing.Point(209, 7);
+            this.lbLecturerDisciplines.Location = new System.Drawing.Point(227, 6);
             this.lbLecturerDisciplines.Name = "lbLecturerDisciplines";
             this.lbLecturerDisciplines.Size = new System.Drawing.Size(225, 186);
             this.lbLecturerDisciplines.TabIndex = 8;
@@ -107,7 +97,7 @@
             // btnLogOutLecturer
             // 
             this.btnLogOutLecturer.BackColor = System.Drawing.Color.LightGray;
-            this.btnLogOutLecturer.Location = new System.Drawing.Point(357, 248);
+            this.btnLogOutLecturer.Location = new System.Drawing.Point(432, 298);
             this.btnLogOutLecturer.Name = "btnLogOutLecturer";
             this.btnLogOutLecturer.Size = new System.Drawing.Size(75, 23);
             this.btnLogOutLecturer.TabIndex = 2;
@@ -168,7 +158,7 @@
             this.tabLecturerStudentAssessments.Location = new System.Drawing.Point(4, 22);
             this.tabLecturerStudentAssessments.Name = "tabLecturerStudentAssessments";
             this.tabLecturerStudentAssessments.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLecturerStudentAssessments.Size = new System.Drawing.Size(444, 286);
+            this.tabLecturerStudentAssessments.Size = new System.Drawing.Size(513, 327);
             this.tabLecturerStudentAssessments.TabIndex = 1;
             this.tabLecturerStudentAssessments.Text = "Student Assessments";
             this.tabLecturerStudentAssessments.UseVisualStyleBackColor = true;
@@ -176,7 +166,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(284, 9);
+            this.label4.Location = new System.Drawing.Point(304, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 4;
@@ -184,7 +174,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(329, 6);
+            this.textBox1.Location = new System.Drawing.Point(349, 6);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 3;
@@ -194,7 +184,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(3, 32);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(433, 212);
+            this.listBox1.Size = new System.Drawing.Size(449, 212);
             this.listBox1.TabIndex = 2;
             // 
             // label2
@@ -215,29 +205,34 @@
             // 
             // tab
             // 
-            this.tab.Controls.Add(this.pictureBox2);
+            this.tab.Controls.Add(this.tbWorkScheduleLecturer);
             this.tab.Location = new System.Drawing.Point(4, 22);
             this.tab.Name = "tab";
             this.tab.Padding = new System.Windows.Forms.Padding(3);
-            this.tab.Size = new System.Drawing.Size(444, 286);
+            this.tab.Size = new System.Drawing.Size(513, 327);
             this.tab.TabIndex = 2;
             this.tab.Text = "Work schedule";
             this.tab.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // tbWorkScheduleLecturer
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(430, 272);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.tbWorkScheduleLecturer.ColumnCount = 2;
+            this.tbWorkScheduleLecturer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbWorkScheduleLecturer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbWorkScheduleLecturer.Location = new System.Drawing.Point(6, 35);
+            this.tbWorkScheduleLecturer.Name = "tbWorkScheduleLecturer";
+            this.tbWorkScheduleLecturer.RowCount = 2;
+            this.tbWorkScheduleLecturer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbWorkScheduleLecturer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tbWorkScheduleLecturer.Size = new System.Drawing.Size(384, 252);
+            this.tbWorkScheduleLecturer.TabIndex = 3;
             // 
             // LecturerWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(452, 312);
+            this.ClientSize = new System.Drawing.Size(521, 353);
             this.Controls.Add(this.tabLecturer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -252,7 +247,6 @@
             this.tabLecturerStudentAssessments.ResumeLayout(false);
             this.tabLecturerStudentAssessments.PerformLayout();
             this.tab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -270,12 +264,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tab;
         private System.Windows.Forms.Button btnLogOutLecturer;
+        private System.Windows.Forms.TableLayoutPanel tbWorkScheduleLecturer;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb;
         private System.Windows.Forms.Button btnAddGradeLecturer;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

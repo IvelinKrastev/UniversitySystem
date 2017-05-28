@@ -34,8 +34,8 @@
             this.tbIDNumberStudent = new System.Windows.Forms.TextBox();
             this.lblFacNumberTxt = new System.Windows.Forms.Label();
             this.lblIdTxt = new System.Windows.Forms.Label();
-            this.btBackStudent = new System.Windows.Forms.Button();
-            this.btLogInStudent = new System.Windows.Forms.Button();
+            this.btnBackStudent = new System.Windows.Forms.Button();
+            this.btnLogInStudent = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogInStudent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,10 +51,12 @@
             // 
             // tbFNumberStudent
             // 
+            this.tbFNumberStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFNumberStudent.Location = new System.Drawing.Point(84, 160);
             this.tbFNumberStudent.Name = "tbFNumberStudent";
-            this.tbFNumberStudent.Size = new System.Drawing.Size(161, 20);
+            this.tbFNumberStudent.Size = new System.Drawing.Size(161, 21);
             this.tbFNumberStudent.TabIndex = 1;
+            this.tbFNumberStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputField_KeyDown);
             // 
             // tbIDNumberStudent
             // 
@@ -63,11 +65,12 @@
             this.tbIDNumberStudent.Name = "tbIDNumberStudent";
             this.tbIDNumberStudent.Size = new System.Drawing.Size(161, 21);
             this.tbIDNumberStudent.TabIndex = 2;
+            this.tbIDNumberStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputField_KeyDown);
             // 
             // lblFacNumberTxt
             // 
             this.lblFacNumberTxt.AutoSize = true;
-            this.lblFacNumberTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFacNumberTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFacNumberTxt.Location = new System.Drawing.Point(117, 142);
             this.lblFacNumberTxt.Name = "lblFacNumberTxt";
             this.lblFacNumberTxt.Size = new System.Drawing.Size(96, 15);
@@ -77,36 +80,36 @@
             // lblIdTxt
             // 
             this.lblIdTxt.AutoSize = true;
-            this.lblIdTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIdTxt.Location = new System.Drawing.Point(84, 196);
             this.lblIdTxt.Name = "lblIdTxt";
             this.lblIdTxt.Size = new System.Drawing.Size(161, 15);
             this.lblIdTxt.TabIndex = 4;
             this.lblIdTxt.Text = "Identification Number (EGN)";
             // 
-            // btBackStudent
+            // btnBackStudent
             // 
-            this.btBackStudent.BackColor = System.Drawing.Color.LightGray;
-            this.btBackStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBackStudent.Location = new System.Drawing.Point(12, 278);
-            this.btBackStudent.Name = "btBackStudent";
-            this.btBackStudent.Size = new System.Drawing.Size(98, 42);
-            this.btBackStudent.TabIndex = 5;
-            this.btBackStudent.Text = "Back";
-            this.btBackStudent.UseVisualStyleBackColor = false;
-            this.btBackStudent.Click += new System.EventHandler(this.btBackStudent_Click);
+            this.btnBackStudent.BackColor = System.Drawing.Color.LightGray;
+            this.btnBackStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackStudent.Location = new System.Drawing.Point(12, 278);
+            this.btnBackStudent.Name = "btnBackStudent";
+            this.btnBackStudent.Size = new System.Drawing.Size(98, 42);
+            this.btnBackStudent.TabIndex = 5;
+            this.btnBackStudent.Text = "Back";
+            this.btnBackStudent.UseVisualStyleBackColor = false;
+            this.btnBackStudent.Click += new System.EventHandler(this.btnBackStudent_Click);
             // 
-            // btLogInStudent
+            // btnLogInStudent
             // 
-            this.btLogInStudent.BackColor = System.Drawing.Color.LightGray;
-            this.btLogInStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogInStudent.Location = new System.Drawing.Point(223, 278);
-            this.btLogInStudent.Name = "btLogInStudent";
-            this.btLogInStudent.Size = new System.Drawing.Size(98, 42);
-            this.btLogInStudent.TabIndex = 6;
-            this.btLogInStudent.Text = "Log in";
-            this.btLogInStudent.UseVisualStyleBackColor = false;
-            this.btLogInStudent.Click += new System.EventHandler(this.btLogInStudent_Click);
+            this.btnLogInStudent.BackColor = System.Drawing.Color.LightGray;
+            this.btnLogInStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogInStudent.Location = new System.Drawing.Point(223, 278);
+            this.btnLogInStudent.Name = "btnLogInStudent";
+            this.btnLogInStudent.Size = new System.Drawing.Size(98, 42);
+            this.btnLogInStudent.TabIndex = 6;
+            this.btnLogInStudent.Text = "Log in";
+            this.btnLogInStudent.UseVisualStyleBackColor = false;
+            this.btnLogInStudent.Click += new System.EventHandler(this.btnLogInStudent_Click);
             // 
             // LogInStudent
             // 
@@ -114,8 +117,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(333, 332);
-            this.Controls.Add(this.btLogInStudent);
-            this.Controls.Add(this.btBackStudent);
+            this.Controls.Add(this.btnLogInStudent);
+            this.Controls.Add(this.btnBackStudent);
             this.Controls.Add(this.lblIdTxt);
             this.Controls.Add(this.lblFacNumberTxt);
             this.Controls.Add(this.tbIDNumberStudent);
@@ -142,7 +145,7 @@
         private System.Windows.Forms.TextBox tbIDNumberStudent;
         private System.Windows.Forms.Label lblFacNumberTxt;
         private System.Windows.Forms.Label lblIdTxt;
-        private System.Windows.Forms.Button btBackStudent;
-        private System.Windows.Forms.Button btLogInStudent;
+        private System.Windows.Forms.Button btnBackStudent;
+        private System.Windows.Forms.Button btnLogInStudent;
     }
 }
