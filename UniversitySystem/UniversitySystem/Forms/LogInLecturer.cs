@@ -64,8 +64,8 @@ namespace UniversitySystem.Forms
                 for (int i = 0; i < lecturers.Count; i++)
                 {
                     // CHECK IF SUCH STUDENT EXISTS IN THE DATABASE.
-                    if (tbIDLecturer.Text == lecturers[i].PersonalId &&
-                        tbWorkNumberLecturer.Text == lecturers[i].WorkNumber)
+                    if (tbIDLecturer.Text.Trim() == lecturers[i].PersonalId &&
+                        tbWorkNumberLecturer.Text.Trim() == lecturers[i].WorkNumber)
                     {
                         Form lw = new LecturerWindow();
                         lw.Show();

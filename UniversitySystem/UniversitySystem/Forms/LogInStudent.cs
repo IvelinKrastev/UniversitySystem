@@ -65,8 +65,8 @@ namespace UniversitySystem
                 for (int i = 0; i < students.Count; i++)
                 {
                     // CHECK IF SUCH STUDENT EXISTS IN THE DATABASE.
-                    if (tbFNumberStudent.Text == students[i].FacultyNumber &&
-                        tbIDNumberStudent.Text == students[i].PersonalId)
+                    if (tbFNumberStudent.Text.Trim() == students[i].FacultyNumber &&
+                        tbIDNumberStudent.Text.Trim() == students[i].PersonalId)
                     {
                         Form sw = new StudentWindow();
                         sw.Show();
