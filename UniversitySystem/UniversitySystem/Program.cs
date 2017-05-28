@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using UniversitySystem.Forms;
+using UniversitySystem.Classes;
 
 namespace UniversitySystem
 {

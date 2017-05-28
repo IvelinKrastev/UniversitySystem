@@ -2,6 +2,7 @@
 {
     public class Student : User
     {
+
         public string FacultyNumber { get; set; }
         public string Nationality { get; set; }
         public string Degrees { get; set; }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace UniversitySystem.Forms
 {
     public partial class LecturerWindow : Form
@@ -19,11 +20,15 @@ namespace UniversitySystem.Forms
 
         private void LecturerWindow_Load(object sender, EventArgs e)
         {
-
         }
         
 
         private void tbWorkScheduleLecturer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tabLecturerHome_Click(object sender, EventArgs e)
         {
 
         }
