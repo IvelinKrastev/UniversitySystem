@@ -1,11 +1,8 @@
-﻿using System;
+﻿using DataAccess.Entity;
+using DataAccess.Repository;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using UniversitySystem.Forms;
 
@@ -17,47 +14,30 @@ namespace UniversitySystem
         {
             InitializeComponent();
         }
-        List<string> StudentFacNumbers = new List<string>();
-        List<string> StudentIDs = new List<string>();
+        List<Student> students = new List<Student>();
 
         Form welcome = new Welcome();
 
+        // FORM LOAD EVENT.
         private void LogInStudent_Load(object sender, EventArgs e)
         {
+            string connectionString = @"Data Source=localhost; Database=UniversitySystem; Integrated Security=True;";
+            string readQuery = "SELECT * FROM Student";
+
+            ReadData rd = new ReadData();
+            rd.ReadForLogin(connectionString, readQuery, students);
         }
 
-
-        private void btLogInStudent_Click(object sender, EventArgs e)
+        // LOGIN BUTTON CLICK EVENT.
+        private void btnLogInStudent_Click(object sender, EventArgs e)
         {
-            if (tbFNumberStudent.Text != string.Empty && tbFNumberStudent.Text.Length != 10 && 
-                tbIDNumberStudent.Text != string.Empty)
-            {
-                for (int i = 0; i < StudentFacNumbers.Count; i++)
-                {
-                    if (tbFNumberStudent.Text == StudentFacNumbers[i] && tbIDNumberStudent.Text == StudentIDs[i])
-                    {
-                        StudentWindow sw = new StudentWindow();
-                        sw.Show();
-
-                        Hide();
-                    }
-                    else if (i == StudentFacNumbers.Count - 1)
-                    {
-                        MessageBox.Show("Incorrect Username/Password");
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please enter a correct Username/Password!");
-            }
+            CheckInputData(students);
         }
 
         // BACK BUTTON CLICK EVENT.
-        private void btBackStudent_Click(object sender, EventArgs e)
+        private void btnBackStudent_Click(object sender, EventArgs e)
         {
             welcome.Show();
-
             Hide();
         }
 
@@ -65,8 +45,56 @@ namespace UniversitySystem
         private void LogInStudent_FormClosing(object sender, FormClosingEventArgs e)
         {
             welcome.Show();
-
             Hide();
+        }
+
+        // TEXTBOX KEY DOWN EVENT.
+        private void inputField_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnLogInStudent_Click(sender, e);
+        }
+
+        // FUNCTION WHICH CHECKS IF THE INPUT DATA FOR THE STUDENT IS VALID AND EXISTS IN THE DATABASE.
+        private void CheckInputData(List<Student> students)
+        {
+            // CHECK IF THE FIELDS ARE IN A CORRECT FORMAT.
+            if (tbFNumberStudent.Text.Trim().Length == 10 && isDigits(tbFNumberStudent) &&
+                tbIDNumberStudent.Text.Trim().Length == 10 && isDigits(tbIDNumberStudent))
+            {
+                for (int i = 0; i < students.Count; i++)
+                {
+                    // CHECK IF SUCH STUDENT EXISTS IN THE DATABASE.
+                    if (tbFNumberStudent.Text == students[i].FacultyNumber &&
+                        tbIDNumberStudent.Text == students[i].PersonalId)
+                    {
+                        Form sw = new StudentWindow();
+                        sw.Show();
+
+                        Hide();
+                        break;
+                    }
+                    else if (i == students.Count - 1)
+                    {
+                        MessageBox.Show("No such student exists!", "No such student!", MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+                MessageBox.Show("Please enter a correct Faculty Number and/or ID Number!", "Incorrect Faculty Number/ID!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        // FUNCTION WHICH CHECKS IF A FIELD CONTAINS ONLY DIGITS.
+        public bool isDigits(TextBox field)
+        {
+            Regex onlyDigits = new Regex("^[0-9]+$");
+
+            if (onlyDigits.IsMatch(field.Text))
+                return true;
+            else
+                return false;
         }
     }
 }

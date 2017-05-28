@@ -11,14 +11,6 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
 
         #region Windows Form Designer generated code
 
@@ -31,7 +23,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LecturerWindow));
             this.tabLecturer = new System.Windows.Forms.TabControl();
             this.tabLecturerHome = new System.Windows.Forms.TabPage();
+            this.btnAddGradeLecturer = new System.Windows.Forms.Button();
             this.lbLecturerDisciplines = new System.Windows.Forms.ListBox();
+            this.btnLogOutLecturer = new System.Windows.Forms.Button();
             this.lbScientificDegreeLecturer = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbLecturerName = new System.Windows.Forms.Label();
@@ -45,8 +39,6 @@
             this.tb = new System.Windows.Forms.TextBox();
             this.tab = new System.Windows.Forms.TabPage();
             this.tbWorkScheduleLecturer = new System.Windows.Forms.TableLayoutPanel();
-            this.btnLogOutLecturer = new System.Windows.Forms.Button();
-            this.btnAddGradeLecturer = new System.Windows.Forms.Button();
             this.tabLecturer.SuspendLayout();
             this.tabLecturerHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,6 +76,16 @@
             this.tabLecturerHome.TabIndex = 0;
             this.tabLecturerHome.Text = "Home";
             // 
+            // btnAddGradeLecturer
+            // 
+            this.btnAddGradeLecturer.BackColor = System.Drawing.Color.LightGray;
+            this.btnAddGradeLecturer.Location = new System.Drawing.Point(12, 261);
+            this.btnAddGradeLecturer.Name = "btnAddGradeLecturer";
+            this.btnAddGradeLecturer.Size = new System.Drawing.Size(75, 23);
+            this.btnAddGradeLecturer.TabIndex = 3;
+            this.btnAddGradeLecturer.Text = "Add Grade";
+            this.btnAddGradeLecturer.UseVisualStyleBackColor = false;
+            // 
             // lbLecturerDisciplines
             // 
             this.lbLecturerDisciplines.FormattingEnabled = true;
@@ -91,6 +93,16 @@
             this.lbLecturerDisciplines.Name = "lbLecturerDisciplines";
             this.lbLecturerDisciplines.Size = new System.Drawing.Size(225, 186);
             this.lbLecturerDisciplines.TabIndex = 8;
+            // 
+            // btnLogOutLecturer
+            // 
+            this.btnLogOutLecturer.BackColor = System.Drawing.Color.LightGray;
+            this.btnLogOutLecturer.Location = new System.Drawing.Point(432, 298);
+            this.btnLogOutLecturer.Name = "btnLogOutLecturer";
+            this.btnLogOutLecturer.Size = new System.Drawing.Size(75, 23);
+            this.btnLogOutLecturer.TabIndex = 2;
+            this.btnLogOutLecturer.Text = "Log out";
+            this.btnLogOutLecturer.UseVisualStyleBackColor = false;
             // 
             // lbScientificDegreeLecturer
             // 
@@ -146,7 +158,7 @@
             this.tabLecturerStudentAssessments.Location = new System.Drawing.Point(4, 22);
             this.tabLecturerStudentAssessments.Name = "tabLecturerStudentAssessments";
             this.tabLecturerStudentAssessments.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLecturerStudentAssessments.Size = new System.Drawing.Size(458, 290);
+            this.tabLecturerStudentAssessments.Size = new System.Drawing.Size(513, 327);
             this.tabLecturerStudentAssessments.TabIndex = 1;
             this.tabLecturerStudentAssessments.Text = "Student Assessments";
             this.tabLecturerStudentAssessments.UseVisualStyleBackColor = true;
@@ -197,7 +209,7 @@
             this.tab.Location = new System.Drawing.Point(4, 22);
             this.tab.Name = "tab";
             this.tab.Padding = new System.Windows.Forms.Padding(3);
-            this.tab.Size = new System.Drawing.Size(458, 290);
+            this.tab.Size = new System.Drawing.Size(513, 327);
             this.tab.TabIndex = 2;
             this.tab.Text = "Work schedule";
             this.tab.UseVisualStyleBackColor = true;
@@ -214,26 +226,6 @@
             this.tbWorkScheduleLecturer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tbWorkScheduleLecturer.Size = new System.Drawing.Size(384, 252);
             this.tbWorkScheduleLecturer.TabIndex = 3;
-            // 
-            // btnLogOutLecturer
-            // 
-            this.btnLogOutLecturer.BackColor = System.Drawing.Color.LightGray;
-            this.btnLogOutLecturer.Location = new System.Drawing.Point(357, 248);
-            this.btnLogOutLecturer.Name = "btnLogOutLecturer";
-            this.btnLogOutLecturer.Size = new System.Drawing.Size(75, 23);
-            this.btnLogOutLecturer.TabIndex = 2;
-            this.btnLogOutLecturer.Text = "Log out";
-            this.btnLogOutLecturer.UseVisualStyleBackColor = false;
-            // 
-            // btnAddGradeLecturer
-            // 
-            this.btnAddGradeLecturer.BackColor = System.Drawing.Color.LightGray;
-            this.btnAddGradeLecturer.Location = new System.Drawing.Point(12, 261);
-            this.btnAddGradeLecturer.Name = "btnAddGradeLecturer";
-            this.btnAddGradeLecturer.Size = new System.Drawing.Size(75, 23);
-            this.btnAddGradeLecturer.TabIndex = 3;
-            this.btnAddGradeLecturer.Text = "Add Grade";
-            this.btnAddGradeLecturer.UseVisualStyleBackColor = false;
             // 
             // LecturerWindow
             // 

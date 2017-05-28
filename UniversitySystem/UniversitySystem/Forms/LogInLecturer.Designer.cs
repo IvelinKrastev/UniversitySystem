@@ -32,8 +32,8 @@
             this.btnLogInLecturer = new System.Windows.Forms.Button();
             this.btnBackLecturer = new System.Windows.Forms.Button();
             this.lblIDTxt = new System.Windows.Forms.Label();
-            this.lblPassTxt = new System.Windows.Forms.Label();
-            this.tbPasswordLecturer = new System.Windows.Forms.TextBox();
+            this.lblWorkNumberTxt = new System.Windows.Forms.Label();
+            this.tbWorkNumberLecturer = new System.Windows.Forms.TextBox();
             this.tbIDLecturer = new System.Windows.Forms.TextBox();
             this.pbLecturer = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbLecturer)).BeginInit();
@@ -66,31 +66,31 @@
             // lblIDTxt
             // 
             this.lblIDTxt.AutoSize = true;
-            this.lblIDTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIDTxt.Location = new System.Drawing.Point(82, 142);
             this.lblIDTxt.Name = "lblIDTxt";
             this.lblIDTxt.Size = new System.Drawing.Size(161, 15);
             this.lblIDTxt.TabIndex = 11;
             this.lblIDTxt.Text = "Identification Number (EGN)";
             // 
-            // lblPassTxt
+            // lblWorkNumberTxt
             // 
-            this.lblPassTxt.AutoSize = true;
-            this.lblPassTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassTxt.Location = new System.Drawing.Point(134, 196);
-            this.lblPassTxt.Name = "lblPassTxt";
-            this.lblPassTxt.Size = new System.Drawing.Size(64, 15);
-            this.lblPassTxt.TabIndex = 10;
-            this.lblPassTxt.Text = "Password:";
+            this.lblWorkNumberTxt.AutoSize = true;
+            this.lblWorkNumberTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWorkNumberTxt.Location = new System.Drawing.Point(120, 196);
+            this.lblWorkNumberTxt.Name = "lblWorkNumberTxt";
+            this.lblWorkNumberTxt.Size = new System.Drawing.Size(86, 15);
+            this.lblWorkNumberTxt.TabIndex = 10;
+            this.lblWorkNumberTxt.Text = "Work Number:";
             // 
-            // tbPasswordLecturer
+            // tbWorkNumberLecturer
             // 
-            this.tbPasswordLecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPasswordLecturer.Location = new System.Drawing.Point(84, 214);
-            this.tbPasswordLecturer.Name = "tbPasswordLecturer";
-            this.tbPasswordLecturer.Size = new System.Drawing.Size(161, 21);
-            this.tbPasswordLecturer.TabIndex = 9;
-            this.tbPasswordLecturer.TextChanged += new System.EventHandler(this.tbPasswordLecturer_TextChanged);
+            this.tbWorkNumberLecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbWorkNumberLecturer.Location = new System.Drawing.Point(84, 214);
+            this.tbWorkNumberLecturer.Name = "tbWorkNumberLecturer";
+            this.tbWorkNumberLecturer.Size = new System.Drawing.Size(161, 21);
+            this.tbWorkNumberLecturer.TabIndex = 9;
+            this.tbWorkNumberLecturer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputField_KeyDown);
             // 
             // tbIDLecturer
             // 
@@ -99,7 +99,7 @@
             this.tbIDLecturer.Name = "tbIDLecturer";
             this.tbIDLecturer.Size = new System.Drawing.Size(161, 21);
             this.tbIDLecturer.TabIndex = 8;
-            this.tbIDLecturer.TextChanged += new System.EventHandler(this.tbIDLecturer_TextChanged);
+            this.tbIDLecturer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputField_KeyDown);
             // 
             // pbLecturer
             // 
@@ -120,8 +120,8 @@
             this.Controls.Add(this.btnLogInLecturer);
             this.Controls.Add(this.btnBackLecturer);
             this.Controls.Add(this.lblIDTxt);
-            this.Controls.Add(this.lblPassTxt);
-            this.Controls.Add(this.tbPasswordLecturer);
+            this.Controls.Add(this.lblWorkNumberTxt);
+            this.Controls.Add(this.tbWorkNumberLecturer);
             this.Controls.Add(this.tbIDLecturer);
             this.Controls.Add(this.pbLecturer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -143,8 +143,8 @@
         private System.Windows.Forms.Button btnLogInLecturer;
         private System.Windows.Forms.Button btnBackLecturer;
         private System.Windows.Forms.Label lblIDTxt;
-        private System.Windows.Forms.Label lblPassTxt;
-        private System.Windows.Forms.TextBox tbPasswordLecturer;
+        private System.Windows.Forms.Label lblWorkNumberTxt;
+        private System.Windows.Forms.TextBox tbWorkNumberLecturer;
         private System.Windows.Forms.TextBox tbIDLecturer;
         private System.Windows.Forms.PictureBox pbLecturer;
     }
