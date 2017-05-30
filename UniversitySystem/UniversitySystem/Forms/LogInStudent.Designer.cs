@@ -141,11 +141,11 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pbLogInStudent;
-        private System.Windows.Forms.TextBox tbFNumberStudent;
         private System.Windows.Forms.TextBox tbIDNumberStudent;
         private System.Windows.Forms.Label lblFacNumberTxt;
         private System.Windows.Forms.Label lblIdTxt;
         private System.Windows.Forms.Button btnBackStudent;
         private System.Windows.Forms.Button btnLogInStudent;
+        public System.Windows.Forms.TextBox tbFNumberStudent;
     }
 }

@@ -20,8 +20,8 @@ namespace UniversitySystem.Forms
         // LOGIN LECTURER FORM LOAD EVENT.
         private void LogInLecturer_Load(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=localhost; Database=UniversitySystem; Integrated Security=True;";
-            string readQuery = "SELECT * FROM Lecturer";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database\UniSystemDatabase.mdf;Integrated Security=True";
+            string readQuery = "SELECT Work_Number, Personal_Id FROM Lecturer";
 
             ReadData rd = new ReadData();
             rd.ReadForLogin(connectionString, readQuery, lecturers);
@@ -64,8 +64,8 @@ namespace UniversitySystem.Forms
                 for (int i = 0; i < lecturers.Count; i++)
                 {
                     // CHECK IF SUCH STUDENT EXISTS IN THE DATABASE.
-                    if (tbIDLecturer.Text.Trim() == lecturers[i].PersonalId &&
-                        tbWorkNumberLecturer.Text.Trim() == lecturers[i].WorkNumber)
+                    if (tbIDLecturer.Text.Trim().Equals(lecturers[i].PersonalId) &&
+                        tbWorkNumberLecturer.Text.Trim().Equals(lecturers[i].WorkNumber))
                     {
                         Form lw = new LecturerWindow();
                         lw.Show();

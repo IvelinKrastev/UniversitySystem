@@ -31,33 +31,33 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentWindow));
             this.tabStudent = new System.Windows.Forms.TabControl();
             this.tabStudentHome = new System.Windows.Forms.TabPage();
-            this.btnLogOutStudent = new System.Windows.Forms.Button();
-            this.btDegreeStudent = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lbNationality = new System.Windows.Forms.Label();
-            this.lbBirthDate = new System.Windows.Forms.Label();
-            this.lbCourseAndGroup = new System.Windows.Forms.Label();
-            this.lbSpecialityStudent = new System.Windows.Forms.Label();
-            this.lbFNumberStudent = new System.Windows.Forms.Label();
-            this.lbStudentName = new System.Windows.Forms.Label();
+            this.lblDisciplinesTxt = new System.Windows.Forms.Label();
+            this.lblGroupTxt = new System.Windows.Forms.Label();
+            this.lblGroup = new System.Windows.Forms.Label();
+            this.lblCourseTxt = new System.Windows.Forms.Label();
+            this.lblCourse = new System.Windows.Forms.Label();
+            this.lblSpecialtyTxt = new System.Windows.Forms.Label();
+            this.lblSpecialty = new System.Windows.Forms.Label();
+            this.lbDegreeTxt = new System.Windows.Forms.Label();
+            this.lblDegree = new System.Windows.Forms.Label();
+            this.lblIDTxt = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
+            this.lblFNumberTxt = new System.Windows.Forms.Label();
+            this.lblFacNumber = new System.Windows.Forms.Label();
+            this.lblLastNameTxt = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblSecondNameTxt = new System.Windows.Forms.Label();
+            this.lblSecondName = new System.Windows.Forms.Label();
+            this.lbDisciplinesForCourse = new System.Windows.Forms.ListBox();
+            this.lblFirstNameTxt = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
             this.tabStudentAssessments = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.lbAssessmentsStudent = new System.Windows.Forms.ListBox();
             this.tabStudentSchedule = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLogOutStudent = new System.Windows.Forms.Button();
             this.tabStudent.SuspendLayout();
             this.tabStudentHome.SuspendLayout();
             this.tabStudentAssessments.SuspendLayout();
-            this.tabStudentSchedule.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabStudent
@@ -65,46 +65,273 @@
             this.tabStudent.Controls.Add(this.tabStudentHome);
             this.tabStudent.Controls.Add(this.tabStudentAssessments);
             this.tabStudent.Controls.Add(this.tabStudentSchedule);
-            this.tabStudent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tabStudent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabStudent.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.tabStudent.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabStudent.Location = new System.Drawing.Point(0, 0);
             this.tabStudent.Name = "tabStudent";
             this.tabStudent.SelectedIndex = 0;
-            this.tabStudent.Size = new System.Drawing.Size(465, 341);
+            this.tabStudent.Size = new System.Drawing.Size(693, 325);
             this.tabStudent.TabIndex = 0;
             // 
             // tabStudentHome
             // 
             this.tabStudentHome.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabStudentHome.Controls.Add(this.btnLogOutStudent);
-            this.tabStudentHome.Controls.Add(this.btDegreeStudent);
-            this.tabStudentHome.Controls.Add(this.label4);
-            this.tabStudentHome.Controls.Add(this.listBox1);
-            this.tabStudentHome.Controls.Add(this.label1);
-            this.tabStudentHome.Controls.Add(this.label2);
-            this.tabStudentHome.Controls.Add(this.label3);
-            this.tabStudentHome.Controls.Add(this.label7);
-            this.tabStudentHome.Controls.Add(this.label8);
-            this.tabStudentHome.Controls.Add(this.label9);
-            this.tabStudentHome.Controls.Add(this.lbNationality);
-            this.tabStudentHome.Controls.Add(this.lbBirthDate);
-            this.tabStudentHome.Controls.Add(this.lbCourseAndGroup);
-            this.tabStudentHome.Controls.Add(this.lbSpecialityStudent);
-            this.tabStudentHome.Controls.Add(this.lbFNumberStudent);
-            this.tabStudentHome.Controls.Add(this.lbStudentName);
+            this.tabStudentHome.Controls.Add(this.lblDisciplinesTxt);
+            this.tabStudentHome.Controls.Add(this.lblGroupTxt);
+            this.tabStudentHome.Controls.Add(this.lblGroup);
+            this.tabStudentHome.Controls.Add(this.lblCourseTxt);
+            this.tabStudentHome.Controls.Add(this.lblCourse);
+            this.tabStudentHome.Controls.Add(this.lblSpecialtyTxt);
+            this.tabStudentHome.Controls.Add(this.lblSpecialty);
+            this.tabStudentHome.Controls.Add(this.lbDegreeTxt);
+            this.tabStudentHome.Controls.Add(this.lblDegree);
+            this.tabStudentHome.Controls.Add(this.lblIDTxt);
+            this.tabStudentHome.Controls.Add(this.lblId);
+            this.tabStudentHome.Controls.Add(this.lblFNumberTxt);
+            this.tabStudentHome.Controls.Add(this.lblFacNumber);
+            this.tabStudentHome.Controls.Add(this.lblLastNameTxt);
+            this.tabStudentHome.Controls.Add(this.lblLastName);
+            this.tabStudentHome.Controls.Add(this.lblSecondNameTxt);
+            this.tabStudentHome.Controls.Add(this.lblSecondName);
+            this.tabStudentHome.Controls.Add(this.lbDisciplinesForCourse);
+            this.tabStudentHome.Controls.Add(this.lblFirstNameTxt);
+            this.tabStudentHome.Controls.Add(this.lblFirstName);
             this.tabStudentHome.Location = new System.Drawing.Point(4, 22);
             this.tabStudentHome.Name = "tabStudentHome";
             this.tabStudentHome.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStudentHome.Size = new System.Drawing.Size(457, 315);
+            this.tabStudentHome.Size = new System.Drawing.Size(685, 299);
             this.tabStudentHome.TabIndex = 0;
             this.tabStudentHome.Text = "Home";
-            this.tabStudentHome.Click += new System.EventHandler(this.tabStudentHome_Click);
+            // 
+            // lblDisciplinesTxt
+            // 
+            this.lblDisciplinesTxt.AutoSize = true;
+            this.lblDisciplinesTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisciplinesTxt.Location = new System.Drawing.Point(486, 20);
+            this.lblDisciplinesTxt.Name = "lblDisciplinesTxt";
+            this.lblDisciplinesTxt.Size = new System.Drawing.Size(95, 20);
+            this.lblDisciplinesTxt.TabIndex = 32;
+            this.lblDisciplinesTxt.Text = "Disciplines";
+            // 
+            // lblGroupTxt
+            // 
+            this.lblGroupTxt.AutoSize = true;
+            this.lblGroupTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGroupTxt.Location = new System.Drawing.Point(6, 260);
+            this.lblGroupTxt.Name = "lblGroupTxt";
+            this.lblGroupTxt.Size = new System.Drawing.Size(50, 15);
+            this.lblGroupTxt.TabIndex = 31;
+            this.lblGroupTxt.Text = "Group:";
+            // 
+            // lblGroup
+            // 
+            this.lblGroup.AutoSize = true;
+            this.lblGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGroup.Location = new System.Drawing.Point(123, 260);
+            this.lblGroup.Name = "lblGroup";
+            this.lblGroup.Size = new System.Drawing.Size(0, 15);
+            this.lblGroup.TabIndex = 30;
+            // 
+            // lblCourseTxt
+            // 
+            this.lblCourseTxt.AutoSize = true;
+            this.lblCourseTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourseTxt.Location = new System.Drawing.Point(6, 230);
+            this.lblCourseTxt.Name = "lblCourseTxt";
+            this.lblCourseTxt.Size = new System.Drawing.Size(56, 15);
+            this.lblCourseTxt.TabIndex = 29;
+            this.lblCourseTxt.Text = "Course:";
+            // 
+            // lblCourse
+            // 
+            this.lblCourse.AutoSize = true;
+            this.lblCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourse.Location = new System.Drawing.Point(123, 230);
+            this.lblCourse.Name = "lblCourse";
+            this.lblCourse.Size = new System.Drawing.Size(0, 15);
+            this.lblCourse.TabIndex = 28;
+            // 
+            // lblSpecialtyTxt
+            // 
+            this.lblSpecialtyTxt.AutoSize = true;
+            this.lblSpecialtyTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSpecialtyTxt.Location = new System.Drawing.Point(6, 200);
+            this.lblSpecialtyTxt.Name = "lblSpecialtyTxt";
+            this.lblSpecialtyTxt.Size = new System.Drawing.Size(69, 15);
+            this.lblSpecialtyTxt.TabIndex = 27;
+            this.lblSpecialtyTxt.Text = "Specialty:";
+            // 
+            // lblSpecialty
+            // 
+            this.lblSpecialty.AutoSize = true;
+            this.lblSpecialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSpecialty.Location = new System.Drawing.Point(123, 200);
+            this.lblSpecialty.Name = "lblSpecialty";
+            this.lblSpecialty.Size = new System.Drawing.Size(0, 15);
+            this.lblSpecialty.TabIndex = 26;
+            // 
+            // lbDegreeTxt
+            // 
+            this.lbDegreeTxt.AutoSize = true;
+            this.lbDegreeTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDegreeTxt.Location = new System.Drawing.Point(6, 170);
+            this.lbDegreeTxt.Name = "lbDegreeTxt";
+            this.lbDegreeTxt.Size = new System.Drawing.Size(58, 15);
+            this.lbDegreeTxt.TabIndex = 25;
+            this.lbDegreeTxt.Text = "Degree:";
+            // 
+            // lblDegree
+            // 
+            this.lblDegree.AutoSize = true;
+            this.lblDegree.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDegree.Location = new System.Drawing.Point(123, 170);
+            this.lblDegree.Name = "lblDegree";
+            this.lblDegree.Size = new System.Drawing.Size(0, 15);
+            this.lblDegree.TabIndex = 24;
+            // 
+            // lblIDTxt
+            // 
+            this.lblIDTxt.AutoSize = true;
+            this.lblIDTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDTxt.Location = new System.Drawing.Point(6, 110);
+            this.lblIDTxt.Name = "lblIDTxt";
+            this.lblIDTxt.Size = new System.Drawing.Size(86, 15);
+            this.lblIDTxt.TabIndex = 23;
+            this.lblIDTxt.Text = "Personal ID:";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(123, 110);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(0, 15);
+            this.lblId.TabIndex = 22;
+            // 
+            // lblFNumberTxt
+            // 
+            this.lblFNumberTxt.AutoSize = true;
+            this.lblFNumberTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFNumberTxt.Location = new System.Drawing.Point(6, 140);
+            this.lblFNumberTxt.Name = "lblFNumberTxt";
+            this.lblFNumberTxt.Size = new System.Drawing.Size(111, 15);
+            this.lblFNumberTxt.TabIndex = 21;
+            this.lblFNumberTxt.Text = "Faculty Number:";
+            // 
+            // lblFacNumber
+            // 
+            this.lblFacNumber.AutoSize = true;
+            this.lblFacNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFacNumber.Location = new System.Drawing.Point(123, 140);
+            this.lblFacNumber.Name = "lblFacNumber";
+            this.lblFacNumber.Size = new System.Drawing.Size(0, 15);
+            this.lblFacNumber.TabIndex = 20;
+            // 
+            // lblLastNameTxt
+            // 
+            this.lblLastNameTxt.AutoSize = true;
+            this.lblLastNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastNameTxt.Location = new System.Drawing.Point(6, 80);
+            this.lblLastNameTxt.Name = "lblLastNameTxt";
+            this.lblLastNameTxt.Size = new System.Drawing.Size(80, 15);
+            this.lblLastNameTxt.TabIndex = 19;
+            this.lblLastNameTxt.Text = "Last Name:";
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLastName.Location = new System.Drawing.Point(123, 80);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(0, 15);
+            this.lblLastName.TabIndex = 18;
+            // 
+            // lblSecondNameTxt
+            // 
+            this.lblSecondNameTxt.AutoSize = true;
+            this.lblSecondNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSecondNameTxt.Location = new System.Drawing.Point(6, 50);
+            this.lblSecondNameTxt.Name = "lblSecondNameTxt";
+            this.lblSecondNameTxt.Size = new System.Drawing.Size(101, 15);
+            this.lblSecondNameTxt.TabIndex = 17;
+            this.lblSecondNameTxt.Text = "Second Name:";
+            // 
+            // lblSecondName
+            // 
+            this.lblSecondName.AutoSize = true;
+            this.lblSecondName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSecondName.Location = new System.Drawing.Point(123, 50);
+            this.lblSecondName.Name = "lblSecondName";
+            this.lblSecondName.Size = new System.Drawing.Size(0, 15);
+            this.lblSecondName.TabIndex = 16;
+            // 
+            // lbDisciplinesForCourse
+            // 
+            this.lbDisciplinesForCourse.BackColor = System.Drawing.Color.LightGray;
+            this.lbDisciplinesForCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDisciplinesForCourse.FormattingEnabled = true;
+            this.lbDisciplinesForCourse.ItemHeight = 16;
+            this.lbDisciplinesForCourse.Location = new System.Drawing.Point(380, 46);
+            this.lbDisciplinesForCourse.Name = "lbDisciplinesForCourse";
+            this.lbDisciplinesForCourse.Size = new System.Drawing.Size(299, 228);
+            this.lbDisciplinesForCourse.TabIndex = 12;
+            // 
+            // lblFirstNameTxt
+            // 
+            this.lblFirstNameTxt.AutoSize = true;
+            this.lblFirstNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstNameTxt.Location = new System.Drawing.Point(6, 20);
+            this.lblFirstNameTxt.Name = "lblFirstNameTxt";
+            this.lblFirstNameTxt.Size = new System.Drawing.Size(81, 15);
+            this.lblFirstNameTxt.TabIndex = 6;
+            this.lblFirstNameTxt.Text = "First Name:";
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Location = new System.Drawing.Point(123, 20);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(0, 15);
+            this.lblFirstName.TabIndex = 0;
+            // 
+            // tabStudentAssessments
+            // 
+            this.tabStudentAssessments.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabStudentAssessments.Controls.Add(this.lbAssessmentsStudent);
+            this.tabStudentAssessments.Location = new System.Drawing.Point(4, 22);
+            this.tabStudentAssessments.Name = "tabStudentAssessments";
+            this.tabStudentAssessments.Padding = new System.Windows.Forms.Padding(3);
+            this.tabStudentAssessments.Size = new System.Drawing.Size(685, 299);
+            this.tabStudentAssessments.TabIndex = 1;
+            this.tabStudentAssessments.Text = "Assessments";
+            // 
+            // lbAssessmentsStudent
+            // 
+            this.lbAssessmentsStudent.BackColor = System.Drawing.Color.Gainsboro;
+            this.lbAssessmentsStudent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbAssessmentsStudent.FormattingEnabled = true;
+            this.lbAssessmentsStudent.Location = new System.Drawing.Point(3, 3);
+            this.lbAssessmentsStudent.Name = "lbAssessmentsStudent";
+            this.lbAssessmentsStudent.Size = new System.Drawing.Size(679, 293);
+            this.lbAssessmentsStudent.TabIndex = 0;
+            // 
+            // tabStudentSchedule
+            // 
+            this.tabStudentSchedule.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabStudentSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tabStudentSchedule.Location = new System.Drawing.Point(4, 22);
+            this.tabStudentSchedule.Name = "tabStudentSchedule";
+            this.tabStudentSchedule.Padding = new System.Windows.Forms.Padding(3);
+            this.tabStudentSchedule.Size = new System.Drawing.Size(685, 299);
+            this.tabStudentSchedule.TabIndex = 2;
+            this.tabStudentSchedule.Text = "Schedule";
             // 
             // btnLogOutStudent
             // 
             this.btnLogOutStudent.BackColor = System.Drawing.Color.LightGray;
             this.btnLogOutStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOutStudent.Location = new System.Drawing.Point(342, 252);
+            this.btnLogOutStudent.Location = new System.Drawing.Point(591, 331);
             this.btnLogOutStudent.Name = "btnLogOutStudent";
             this.btnLogOutStudent.Size = new System.Drawing.Size(98, 42);
             this.btnLogOutStudent.TabIndex = 15;
@@ -112,225 +339,26 @@
             this.btnLogOutStudent.UseVisualStyleBackColor = false;
             this.btnLogOutStudent.Click += new System.EventHandler(this.btnLogOutStudent_Click);
             // 
-            // btDegreeStudent
-            // 
-            this.btDegreeStudent.AutoSize = true;
-            this.btDegreeStudent.Location = new System.Drawing.Point(111, 156);
-            this.btDegreeStudent.Name = "btDegreeStudent";
-            this.btDegreeStudent.Size = new System.Drawing.Size(35, 13);
-            this.btDegreeStudent.TabIndex = 14;
-            this.btDegreeStudent.Text = "label6";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 156);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Enrolled as:";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(221, 18);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(223, 160);
-            this.listBox1.TabIndex = 12;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 130);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Nationality:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 108);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Birth Date:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Course/Group:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 64);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Speciality:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(22, 41);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Faculty Number:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(22, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Name:";
-            // 
-            // lbNationality
-            // 
-            this.lbNationality.AutoSize = true;
-            this.lbNationality.Location = new System.Drawing.Point(111, 130);
-            this.lbNationality.Name = "lbNationality";
-            this.lbNationality.Size = new System.Drawing.Size(35, 13);
-            this.lbNationality.TabIndex = 5;
-            this.lbNationality.Text = "label6";
-            // 
-            // lbBirthDate
-            // 
-            this.lbBirthDate.AutoSize = true;
-            this.lbBirthDate.Location = new System.Drawing.Point(111, 108);
-            this.lbBirthDate.Name = "lbBirthDate";
-            this.lbBirthDate.Size = new System.Drawing.Size(35, 13);
-            this.lbBirthDate.TabIndex = 4;
-            this.lbBirthDate.Text = "label5";
-            // 
-            // lbCourseAndGroup
-            // 
-            this.lbCourseAndGroup.AutoSize = true;
-            this.lbCourseAndGroup.Location = new System.Drawing.Point(111, 86);
-            this.lbCourseAndGroup.Name = "lbCourseAndGroup";
-            this.lbCourseAndGroup.Size = new System.Drawing.Size(35, 13);
-            this.lbCourseAndGroup.TabIndex = 3;
-            this.lbCourseAndGroup.Text = "label4";
-            this.lbCourseAndGroup.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // lbSpecialityStudent
-            // 
-            this.lbSpecialityStudent.AutoSize = true;
-            this.lbSpecialityStudent.Location = new System.Drawing.Point(111, 64);
-            this.lbSpecialityStudent.Name = "lbSpecialityStudent";
-            this.lbSpecialityStudent.Size = new System.Drawing.Size(35, 13);
-            this.lbSpecialityStudent.TabIndex = 2;
-            this.lbSpecialityStudent.Text = "label3";
-            // 
-            // lbFNumberStudent
-            // 
-            this.lbFNumberStudent.AutoSize = true;
-            this.lbFNumberStudent.Location = new System.Drawing.Point(111, 41);
-            this.lbFNumberStudent.Name = "lbFNumberStudent";
-            this.lbFNumberStudent.Size = new System.Drawing.Size(35, 13);
-            this.lbFNumberStudent.TabIndex = 1;
-            this.lbFNumberStudent.Text = "label2";
-            // 
-            // lbStudentName
-            // 
-            this.lbStudentName.AutoSize = true;
-            this.lbStudentName.Location = new System.Drawing.Point(111, 18);
-            this.lbStudentName.Name = "lbStudentName";
-            this.lbStudentName.Size = new System.Drawing.Size(35, 13);
-            this.lbStudentName.TabIndex = 0;
-            this.lbStudentName.Text = "label1";
-            // 
-            // tabStudentAssessments
-            // 
-            this.tabStudentAssessments.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabStudentAssessments.Controls.Add(this.button1);
-            this.tabStudentAssessments.Controls.Add(this.lbAssessmentsStudent);
-            this.tabStudentAssessments.Location = new System.Drawing.Point(4, 22);
-            this.tabStudentAssessments.Name = "tabStudentAssessments";
-            this.tabStudentAssessments.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStudentAssessments.Size = new System.Drawing.Size(457, 315);
-            this.tabStudentAssessments.TabIndex = 1;
-            this.tabStudentAssessments.Text = "Assessments";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LightGray;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(340, 251);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 42);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Log Out";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // lbAssessmentsStudent
-            // 
-            this.lbAssessmentsStudent.FormattingEnabled = true;
-            this.lbAssessmentsStudent.Location = new System.Drawing.Point(3, 3);
-            this.lbAssessmentsStudent.Name = "lbAssessmentsStudent";
-            this.lbAssessmentsStudent.Size = new System.Drawing.Size(448, 303);
-            this.lbAssessmentsStudent.TabIndex = 0;
-            // 
-            // tabStudentSchedule
-            // 
-            this.tabStudentSchedule.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabStudentSchedule.Controls.Add(this.pictureBox1);
-            this.tabStudentSchedule.Controls.Add(this.button2);
-            this.tabStudentSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tabStudentSchedule.Location = new System.Drawing.Point(4, 22);
-            this.tabStudentSchedule.Name = "tabStudentSchedule";
-            this.tabStudentSchedule.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStudentSchedule.Size = new System.Drawing.Size(457, 315);
-            this.tabStudentSchedule.TabIndex = 2;
-            this.tabStudentSchedule.Text = "Schedule";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LightGray;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(351, 265);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 42);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Log Out";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(8, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(441, 256);
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
             // StudentWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(465, 341);
+            this.ClientSize = new System.Drawing.Size(693, 385);
             this.Controls.Add(this.tabStudent);
+            this.Controls.Add(this.btnLogOutStudent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "StudentWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "StudentWindow";
+            this.Text = "Hello, Student";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentWindow_FormClosing);
             this.Load += new System.EventHandler(this.StudentWindow_Load);
             this.tabStudent.ResumeLayout(false);
             this.tabStudentHome.ResumeLayout(false);
             this.tabStudentHome.PerformLayout();
             this.tabStudentAssessments.ResumeLayout(false);
-            this.tabStudentSchedule.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -339,27 +367,29 @@
 
         private System.Windows.Forms.TabControl tabStudent;
         private System.Windows.Forms.TabPage tabStudentHome;
-        private System.Windows.Forms.Label lbNationality;
-        private System.Windows.Forms.Label lbBirthDate;
-        private System.Windows.Forms.Label lbCourseAndGroup;
-        private System.Windows.Forms.Label lbSpecialityStudent;
-        private System.Windows.Forms.Label lbFNumberStudent;
-        private System.Windows.Forms.Label lbStudentName;
+        private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.TabPage tabStudentAssessments;
         private System.Windows.Forms.TabPage tabStudentSchedule;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label btDegreeStudent;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label lblFirstNameTxt;
+        private System.Windows.Forms.ListBox lbDisciplinesForCourse;
         private System.Windows.Forms.ListBox lbAssessmentsStudent;
         private System.Windows.Forms.Button btnLogOutStudent;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblSecondNameTxt;
+        private System.Windows.Forms.Label lblSecondName;
+        private System.Windows.Forms.Label lblFNumberTxt;
+        private System.Windows.Forms.Label lblLastNameTxt;
+        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.Label lblIDTxt;
+        private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Label lblGroupTxt;
+        private System.Windows.Forms.Label lblGroup;
+        private System.Windows.Forms.Label lblCourseTxt;
+        private System.Windows.Forms.Label lblCourse;
+        private System.Windows.Forms.Label lblSpecialtyTxt;
+        private System.Windows.Forms.Label lblSpecialty;
+        private System.Windows.Forms.Label lbDegreeTxt;
+        private System.Windows.Forms.Label lblDegree;
+        public System.Windows.Forms.Label lblFacNumber;
+        private System.Windows.Forms.Label lblDisciplinesTxt;
     }
 }

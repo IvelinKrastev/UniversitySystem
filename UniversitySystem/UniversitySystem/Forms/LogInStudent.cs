@@ -21,8 +21,8 @@ namespace UniversitySystem
         // FORM LOAD EVENT.
         private void LogInStudent_Load(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=localhost; Database=UniversitySystem; Integrated Security=True;";
-            string readQuery = "SELECT * FROM Student";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database\UniSystemDatabase.mdf;Integrated Security=True";
+            string readQuery = "SELECT Faculty_Number, Personal_Id FROM Student";
 
             ReadData rd = new ReadData();
             rd.ReadForLogin(connectionString, readQuery, students);
@@ -68,7 +68,8 @@ namespace UniversitySystem
                     if (tbFNumberStudent.Text.Trim() == students[i].FacultyNumber &&
                         tbIDNumberStudent.Text.Trim() == students[i].PersonalId)
                     {
-                        Form sw = new StudentWindow();
+                        StudentWindow sw = new StudentWindow();
+                        sw.lblFacNumber.Text = tbFNumberStudent.Text;
                         sw.Show();
 
                         Hide();

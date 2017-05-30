@@ -1,8 +1,8 @@
 ﻿FROM TABLE [STUDENTS]
-	1. 1601681009 - Kiril - Ivanov - Petrov - 9705041689 - Bulgarian - Bachelor - Software Techologies And Design - 1 - 1a - 1,2,3,4,5,6
-	2. 1601681010 - Mihail - Dimitrov - Panov - 9712041367 - Bulgarian - Bachelor - Software Techologies And Design - 1 - 1a - 1 - 1,2,3,4,5,6
-	3. 1501681049 - Ivana - Marinova - Mihailova - 9602201450 - Bulgarian - Bachelor - Software Techologies And Design - 2 - 2a - 2 - 7,8,9
-	4. 1501681059 - Konstantin - Trifinov - Ivanov - 9610154881 - Bulgarian - Bachelor - Software Techologies And Design - 2 - 2b - 2 - 7,8,9
+	1. 1601681009 - Kiril - Ivanov - Petrov - 9705041689 - Bulgarian - Bachelor - Software Technologies And Design - 1 - 1a - 1,2,3,4,5,6
+	2. 1601681010 - Mihail - Dimitrov - Panov - 9712041367 - Bulgarian - Bachelor - Software Technologies And Design - 1 - 1a - 1 - 1,2,3,4,5,6
+	3. 1501681049 - Ivana - Marinova - Mihailova - 9602201450 - Bulgarian - Bachelor - Software Technologies And Design - 2 - 2a - 2 - 7,8,9
+	4. 1501681059 - Konstantin - Trifinov - Ivanov - 9610154881 - Bulgarian - Bachelor - Software Technologies And Design - 2 - 2b - 2 - 7,8,9
 	5. 1401681001 - Milen - Minchev - Ivanchev - 9501091569 - Bulgarian - Bachelor - Software Technologies And Design - 3 - 1a - 3 - 10,11
 	6. 1301681089 - Martin - Marinov - Minchev - 9609291478 - Bulgarian - Bachelor - Software Technologies And Design - 4 - 3b - 4 - 12,13
 
