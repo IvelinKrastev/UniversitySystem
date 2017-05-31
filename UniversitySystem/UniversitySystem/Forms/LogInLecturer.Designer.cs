@@ -46,7 +46,7 @@
             this.btnLogInLecturer.Location = new System.Drawing.Point(223, 278);
             this.btnLogInLecturer.Name = "btnLogInLecturer";
             this.btnLogInLecturer.Size = new System.Drawing.Size(98, 42);
-            this.btnLogInLecturer.TabIndex = 13;
+            this.btnLogInLecturer.TabIndex = 3;
             this.btnLogInLecturer.Text = "Log in";
             this.btnLogInLecturer.UseVisualStyleBackColor = false;
             this.btnLogInLecturer.Click += new System.EventHandler(this.btnLogInLecturer_Click);
@@ -58,7 +58,7 @@
             this.btnBackLecturer.Location = new System.Drawing.Point(12, 278);
             this.btnBackLecturer.Name = "btnBackLecturer";
             this.btnBackLecturer.Size = new System.Drawing.Size(98, 42);
-            this.btnBackLecturer.TabIndex = 12;
+            this.btnBackLecturer.TabIndex = 4;
             this.btnBackLecturer.Text = "Back";
             this.btnBackLecturer.UseVisualStyleBackColor = false;
             this.btnBackLecturer.Click += new System.EventHandler(this.btnBackLecturer_Click);
@@ -67,7 +67,7 @@
             // 
             this.lblIDTxt.AutoSize = true;
             this.lblIDTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDTxt.Location = new System.Drawing.Point(82, 142);
+            this.lblIDTxt.Location = new System.Drawing.Point(84, 196);
             this.lblIDTxt.Name = "lblIDTxt";
             this.lblIDTxt.Size = new System.Drawing.Size(161, 15);
             this.lblIDTxt.TabIndex = 11;
@@ -77,7 +77,7 @@
             // 
             this.lblWorkNumberTxt.AutoSize = true;
             this.lblWorkNumberTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWorkNumberTxt.Location = new System.Drawing.Point(120, 196);
+            this.lblWorkNumberTxt.Location = new System.Drawing.Point(121, 142);
             this.lblWorkNumberTxt.Name = "lblWorkNumberTxt";
             this.lblWorkNumberTxt.Size = new System.Drawing.Size(86, 15);
             this.lblWorkNumberTxt.TabIndex = 10;
@@ -86,19 +86,20 @@
             // tbWorkNumberLecturer
             // 
             this.tbWorkNumberLecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbWorkNumberLecturer.Location = new System.Drawing.Point(84, 214);
+            this.tbWorkNumberLecturer.Location = new System.Drawing.Point(85, 160);
             this.tbWorkNumberLecturer.Name = "tbWorkNumberLecturer";
             this.tbWorkNumberLecturer.Size = new System.Drawing.Size(161, 21);
-            this.tbWorkNumberLecturer.TabIndex = 9;
+            this.tbWorkNumberLecturer.TabIndex = 1;
             this.tbWorkNumberLecturer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputField_KeyDown);
             // 
             // tbIDLecturer
             // 
             this.tbIDLecturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbIDLecturer.Location = new System.Drawing.Point(84, 160);
+            this.tbIDLecturer.Location = new System.Drawing.Point(86, 214);
             this.tbIDLecturer.Name = "tbIDLecturer";
+            this.tbIDLecturer.PasswordChar = '*';
             this.tbIDLecturer.Size = new System.Drawing.Size(161, 21);
-            this.tbIDLecturer.TabIndex = 8;
+            this.tbIDLecturer.TabIndex = 2;
             this.tbIDLecturer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputField_KeyDown);
             // 
             // pbLecturer

@@ -147,6 +147,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database_Data.txt" />
+    <None Include="Lecturer_Pictures\Valkov.jpg" />
+    <None Include="Lecturer_Pictures\Tyankova.jpg" />
+    <None Include="Lecturer_Pictures\Terzieva.jpg" />
+    <None Include="Lecturer_Pictures\Ivailov.jpg" />
+    <None Include="Lecturer_Pictures\Baikalov.jpg" />
+    <None Include="Lecturer_Pictures\Angelov.jpg" />
+    <None Include="Lecturer_Pictures\Anastasov.jpg" />
     <None Include="Resources\teacher-icon-71137.png" />
     <None Include="Resources\graduate-icon-7829.png" />
   </ItemGroup>
@@ -162,9 +169,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Lecturer_Pictures\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{fdb360e0-26d2-42e3-9b11-1b47100c594c}</Project>

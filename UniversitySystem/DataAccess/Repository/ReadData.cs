@@ -1,142 +1,168 @@
 ﻿using DataAccess.Entity;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Windows.Forms;
-using System;
+using System.IO;
 
 namespace DataAccess.Repository
 {
     public class ReadData
     {
         // FUNCTION WHICH RETRIEVES THE NEEDED DATA FOR LOGIN FROM THE [STUDENT] TABLE.
-        public void ReadForLogin(string connectionString, string readQuery, List<Student> students)
+        public void ReadForLogin(string path, List<Student> students)
         {
-            using (SqlConnection DBConnect = new SqlConnection(connectionString))
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
-                try
+                using (StreamReader reader = new StreamReader(fs))
                 {
-                    // OPENING THE CONNECTION.
-                    DBConnect.Open();
-                    SqlCommand cmd = new SqlCommand(readQuery, DBConnect);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
                     // READING FROM THE TABLE [STUDENTS].
-                    while (reader.Read())
+                    while (!reader.EndOfStream)
                     {
                         Student s = new Student();
-                        s.FacultyNumber = reader["Faculty_Number"].ToString();
-                        s.PersonalId = reader["Personal_ID"].ToString();
+
+                        string[] split = reader.ReadLine().Split('-');
+
+                        s.FacultyNumber = split[0];
+                        s.PersonalId = split[4];
 
                         students.Add(s);
                     }
-                }
-                catch (SqlException)
-                {
-                    MessageBox.Show("An unexpected error has occured with the database. Please try again later.", "Unexpected error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
         // FUNCTION WHICH RETRIEVES THE NEEDED DATA FOR LOGIN FROM THE [LECTURER] TABLE.
-        public void ReadForLogin(string connectionString, string readQuery, List<Lecturer> lecturers)
+        public void ReadForLogin(string path, List<Lecturer> lecturers)
         {
-            using (SqlConnection DBConnect = new SqlConnection(connectionString))
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
-                try
+                using (StreamReader reader = new StreamReader(fs))
                 {
-                    // OPENING THE CONNECTION.
-                    DBConnect.Open();
-                    SqlCommand cmd = new SqlCommand(readQuery, DBConnect);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
                     // READING FROM THE TABLE [LECTURER].
-                    while (reader.Read())
+                    while (!reader.EndOfStream)
                     {
+                        string[] split = reader.ReadLine().Split('-');
+
                         Lecturer l = new Lecturer();
-                        l.PersonalId = reader["Personal_ID"].ToString();
-                        l.WorkNumber = reader["Work_Number"].ToString();
+                        l.PersonalId = split[5].ToString();
+                        l.WorkNumber = split[0].ToString();
 
                         lecturers.Add(l);
                     }
                 }
-                catch (SqlException)
+            }
+        }
+        
+        // FUNCTION WHICH RETRIEVES THE NEEDED DATA FOR THE STUDENT WINDOW.
+        public void ReadTableData(string path, string facNumber, Student student)
+        {
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+            {
+                using (StreamReader reader = new StreamReader(fs))
                 {
-                    MessageBox.Show("An unexpected error has occured with the database. Please try again later.", "Unexpected error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // READING FROM THE TABLE [STUDENTS].
+                    while (!reader.EndOfStream)
+                    {
+                        string[] split = reader.ReadLine().Split('-');
+
+                        if (split[0].Equals(facNumber))
+                        {
+                            student.FacultyNumber = split[0];
+                            student.FirstName = split[1];
+                            student.SecondName = split[2];
+                            student.LastName = split[3];
+                            student.PersonalId = split[4];
+                            student.Degree = split[5];
+                            student.Specialty = split[6];
+                            student.Course = byte.Parse(split[7]);
+                            student.Group = split[8];
+
+                            break;
+                        }
+                    }
                 }
             }
         }
 
-        // FUNCTION WHICH RETRIEVES THE NEEDED DATA FOR THE STUDENT WINDOW.
-        public void ReadTableData(string connectionString, string readQuery, string facNumber, Student student)
+        // FUNCTION WHICH RETRIEVES THE NEEDED DATA FOR THE LECTURER WINDOW.
+        public void ReadTableData(string path, string workNumber, Lecturer lecturer)
         {
-            using (SqlConnection DBConnect = new SqlConnection(connectionString))
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
-                try
+                using (StreamReader reader = new StreamReader(fs))
                 {
-                    // OPENING THE CONNECTION.
-                    DBConnect.Open();
-                    SqlCommand cmd = new SqlCommand(readQuery, DBConnect);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    // READING FROM THE TABLE [STUDENTS].
-                    while (reader.Read())
+                    // READING FROM THE TABLE [LECTURER].
+                    while (!reader.EndOfStream)
                     {
-                        if (reader["Faculty_Number"].ToString().Equals(facNumber))
+                        string[] split = reader.ReadLine().Split('-');
+
+                        if (split[0].Equals(workNumber))
                         {
-                            student.FacultyNumber = reader["Faculty_Number"].ToString();
-                            student.FirstName = reader["First_Name"].ToString();
-                            student.SecondName = reader["Second_Name"].ToString();
-                            student.LastName = reader["Last_Name"].ToString();
-                            student.PersonalId = reader["Personal_Id"].ToString();
-                            student.Degree = reader["Degree"].ToString();
-                            student.Specialty = reader["Specialty"].ToString();
-                            student.Course = byte.Parse(reader["Course"].ToString());
-                            student.Group = reader["Group"].ToString();
+                            lecturer.WorkNumber = split[0];
+                            lecturer.Degree = split[1];
+                            lecturer.FirstName = split[2];
+                            lecturer.SecondName = split[3];
+                            lecturer.LastName = split[4];
+                            lecturer.PersonalId = split[5];
+                            lecturer.Image = split[6];
+
+                            break;
                         }
                     }
-                }
-                catch (SqlException)
-                {
-                    MessageBox.Show("An unexpected error has occured with the database. Please try again later.", "Unexpected error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
         // FUNCTION WHICH RETRIEVES THE NEEDED DATA FOR THE STUDENT WINDOW FROM THE [DISCIPLINES] TABLE.
-        public void ReadDisciplines(string connectionString, string readQuery, string specialty, string course, List<Discipline> disciplines)
+        public void ReadDisciplines(string path, string specialty, string course, List<Discipline> disciplines)
         {
-            using (SqlConnection DBConnect = new SqlConnection(connectionString))
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
-                try
+                using (StreamReader reader = new StreamReader(fs))
                 {
-                    // OPENING THE CONNECTION.
-                    DBConnect.Open();
-                    SqlCommand cmd = new SqlCommand(readQuery, DBConnect);
-
-                    SqlDataReader reader = cmd.ExecuteReader();
-
-                    // READING FROM THE TABLE [STUDENTS].
-                    while (reader.Read())
+                    // READING FROM THE TABLE [DISCIPLINES].
+                    while (!reader.EndOfStream)
                     {
-                        if (reader["Specialty"].ToString().Equals(specialty) && reader["Course"].ToString().Equals(course))
+                        string[] split = reader.ReadLine().Split('-');
+
+                        if (split[2].Equals(specialty) && split[3].ToString().Equals(course))
                         {
                             Discipline d = new Discipline();
 
-                            d.DisciplineName = reader["Discipline_Name"].ToString();
+                            d.DisciplineName = split[1];
                             d.Specialty = specialty;
                             d.Course = byte.Parse(course);
-                            d.LecturerWorkNumber = reader["Lecturer_Work_Number"].ToString();
+                            d.LecturerWorkNumber = split[4];
 
                             disciplines.Add(d);
                         }
                     }
                 }
-                catch (SqlException)
+            }
+        }
+
+        // FUNCTION WHICH RETRIEVES THE NEEDED DATA FOR THE LECTURER WINDOW FROM THE [DISCIPLINES] TABLE.
+        public void ReadDisciplines(string path, string workNumber, List<Discipline> disciplines)
+        {
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+            {
+                using (StreamReader reader = new StreamReader(fs))
                 {
-                    MessageBox.Show("An unexpected error has occured with the database. Please try again later.", "Unexpected error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // READING FROM THE TABLE [DISCIPLINES].
+                    while (!reader.EndOfStream)
+                    {
+                        string[] split = reader.ReadLine().Split('-');
+
+                        if (split[4].Equals(workNumber))
+                        {
+                            Discipline d = new Discipline();
+
+                            d.DisciplineName = split[1];
+                            d.Specialty = split[2];
+                            d.Course = byte.Parse(split[3]);
+                            d.LecturerWorkNumber = workNumber;
+
+                            disciplines.Add(d);
+                        }
+                    }
                 }
             }
         }

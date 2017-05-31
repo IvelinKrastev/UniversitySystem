@@ -13,6 +13,7 @@ namespace UniversitySystem.Forms
         {
             InitializeComponent();
         }
+        string path = "Lecturers.txt";
         List<Lecturer> lecturers = new List<Lecturer>();
 
         Form welcome = new Welcome();
@@ -20,11 +21,8 @@ namespace UniversitySystem.Forms
         // LOGIN LECTURER FORM LOAD EVENT.
         private void LogInLecturer_Load(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database\UniSystemDatabase.mdf;Integrated Security=True";
-            string readQuery = "SELECT Work_Number, Personal_Id FROM Lecturer";
-
             ReadData rd = new ReadData();
-            rd.ReadForLogin(connectionString, readQuery, lecturers);
+            rd.ReadForLogin(path, lecturers);
         }
         
         // BUTTON LOGIN CLICK EVENT.
@@ -67,7 +65,8 @@ namespace UniversitySystem.Forms
                     if (tbIDLecturer.Text.Trim().Equals(lecturers[i].PersonalId) &&
                         tbWorkNumberLecturer.Text.Trim().Equals(lecturers[i].WorkNumber))
                     {
-                        Form lw = new LecturerWindow();
+                        LecturerWindow lw = new LecturerWindow();
+                        lw.workNumber = tbWorkNumberLecturer.Text;
                         lw.Show();
 
                         Hide();

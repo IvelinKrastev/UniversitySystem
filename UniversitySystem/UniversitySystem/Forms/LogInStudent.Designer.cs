@@ -63,6 +63,7 @@
             this.tbIDNumberStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbIDNumberStudent.Location = new System.Drawing.Point(84, 214);
             this.tbIDNumberStudent.Name = "tbIDNumberStudent";
+            this.tbIDNumberStudent.PasswordChar = '*';
             this.tbIDNumberStudent.Size = new System.Drawing.Size(161, 21);
             this.tbIDNumberStudent.TabIndex = 2;
             this.tbIDNumberStudent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.inputField_KeyDown);

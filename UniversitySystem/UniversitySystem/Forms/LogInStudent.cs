@@ -14,6 +14,7 @@ namespace UniversitySystem
         {
             InitializeComponent();
         }
+        string path = "Students.txt";
         List<Student> students = new List<Student>();
 
         Form welcome = new Welcome();
@@ -21,11 +22,8 @@ namespace UniversitySystem
         // FORM LOAD EVENT.
         private void LogInStudent_Load(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database\UniSystemDatabase.mdf;Integrated Security=True";
-            string readQuery = "SELECT Faculty_Number, Personal_Id FROM Student";
-
             ReadData rd = new ReadData();
-            rd.ReadForLogin(connectionString, readQuery, students);
+            rd.ReadForLogin(path, students);
         }
 
         // LOGIN BUTTON CLICK EVENT.

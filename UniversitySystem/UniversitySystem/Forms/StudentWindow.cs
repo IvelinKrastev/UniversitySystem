@@ -12,23 +12,20 @@ namespace UniversitySystem.Forms
         {
             InitializeComponent();
         }
+        string path = "Students.txt";
+
         Student student = new Student();
         List<Discipline> disciplines = new List<Discipline>();
-        bool isButonClicked = false;
 
         // FORM LOAD EVENT.
         private void StudentWindow_Load(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database\UniSystemDatabase.mdf;Integrated Security=True";
-            string readQuery = "SELECT * FROM Student";
-
             ReadData rd = new ReadData();
-            rd.ReadTableData(connectionString, readQuery, lblFacNumber.Text, student);
-
+            rd.ReadTableData(path, lblFacNumber.Text, student);
             WriteDataToLabels(student);
 
-            readQuery = "SELECT * FROM Disciplines";
-            rd.ReadDisciplines(connectionString, readQuery, lblSpecialty.Text, lblCourse.Text, disciplines);
+            path = "Disciplines.txt";
+            rd.ReadDisciplines(path, lblSpecialty.Text, lblCourse.Text, disciplines);
 
             WriteDataToListBox(disciplines);
         }
@@ -79,6 +76,7 @@ namespace UniversitySystem.Forms
             }
         }
 
+        // FUNCTION WHICH OPENS THE WELCOME FORM AND HIDES THE CURRENT.
         private void OpenWelcomeForm()
         {
             Form welcome = new Welcome();
