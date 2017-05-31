@@ -113,6 +113,126 @@ namespace UniversitySystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ScheduleCourse1Semester1 {
+            get {
+                object obj = ResourceManager.GetObject("ScheduleCourse1Semester1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ScheduleCourse1Semester2 {
+            get {
+                object obj = ResourceManager.GetObject("ScheduleCourse1Semester2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ScheduleCourse1Semester3 {
+            get {
+                object obj = ResourceManager.GetObject("ScheduleCourse1Semester3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ScheduleCourse2Semester1 {
+            get {
+                object obj = ResourceManager.GetObject("ScheduleCourse2Semester1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ScheduleCourse2Semester2 {
+            get {
+                object obj = ResourceManager.GetObject("ScheduleCourse2Semester2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ScheduleCourse2Semester3 {
+            get {
+                object obj = ResourceManager.GetObject("ScheduleCourse2Semester3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ScheduleCourse3Semester1 {
+            get {
+                object obj = ResourceManager.GetObject("ScheduleCourse3Semester1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ScheduleCourse3Semester2 {
+            get {
+                object obj = ResourceManager.GetObject("ScheduleCourse3Semester2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ScheduleCourse3Semester3 {
+            get {
+                object obj = ResourceManager.GetObject("ScheduleCourse3Semester3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ScheduleCourse4Semester1 {
+            get {
+                object obj = ResourceManager.GetObject("ScheduleCourse4Semester1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ScheduleCourse4Semester2 {
+            get {
+                object obj = ResourceManager.GetObject("ScheduleCourse4Semester2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ScheduleCourse4Semester3 {
+            get {
+                object obj = ResourceManager.GetObject("ScheduleCourse4Semester3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Student {
             get {
                 object obj = ResourceManager.GetObject("Student", resourceCulture);

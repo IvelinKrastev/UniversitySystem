@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UniversitySystem</RootNamespace>
     <AssemblyName>UniversitySystem</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <PublishUrl>publish\</PublishUrl>
@@ -147,6 +147,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database_Data.txt" />
+    <None Include="Resources\ScheduleCourse4Semester3.PNG" />
+    <None Include="Resources\ScheduleCourse4Semester2.PNG" />
+    <None Include="Resources\ScheduleCourse4Semester1.PNG" />
+    <None Include="Resources\ScheduleCourse3Semester3.PNG" />
+    <None Include="Resources\ScheduleCourse3Semester2.PNG" />
+    <None Include="Resources\ScheduleCourse3Semester1.PNG" />
+    <None Include="Resources\ScheduleCourse2Semester3.PNG" />
+    <None Include="Resources\ScheduleCourse2Semester2.PNG" />
+    <None Include="Resources\ScheduleCourse2Semester1.PNG" />
+    <None Include="Resources\ScheduleCourse1Semester3.PNG" />
+    <None Include="Resources\ScheduleCourse1Semester2.PNG" />
+    <None Include="Resources\ScheduleCourse1Semester1.PNG" />
     <None Include="Lecturer_Pictures\Valkov.jpg" />
     <None Include="Lecturer_Pictures\Tyankova.jpg" />
     <None Include="Lecturer_Pictures\Terzieva.jpg" />

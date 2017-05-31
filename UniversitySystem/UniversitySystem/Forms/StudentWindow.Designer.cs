@@ -55,9 +55,12 @@
             this.lbAssessmentsStudent = new System.Windows.Forms.ListBox();
             this.tabStudentSchedule = new System.Windows.Forms.TabPage();
             this.btnLogOutStudent = new System.Windows.Forms.Button();
+            this.pbStudentSchedule = new System.Windows.Forms.PictureBox();
             this.tabStudent.SuspendLayout();
             this.tabStudentHome.SuspendLayout();
             this.tabStudentAssessments.SuspendLayout();
+            this.tabStudentSchedule.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStudentSchedule)).BeginInit();
             this.SuspendLayout();
             // 
             // tabStudent
@@ -319,6 +322,7 @@
             // tabStudentSchedule
             // 
             this.tabStudentSchedule.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabStudentSchedule.Controls.Add(this.pbStudentSchedule);
             this.tabStudentSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabStudentSchedule.Location = new System.Drawing.Point(4, 22);
             this.tabStudentSchedule.Name = "tabStudentSchedule";
@@ -338,6 +342,15 @@
             this.btnLogOutStudent.Text = "Log Out";
             this.btnLogOutStudent.UseVisualStyleBackColor = false;
             this.btnLogOutStudent.Click += new System.EventHandler(this.btnLogOutStudent_Click);
+            // 
+            // pbStudentSchedule
+            // 
+            this.pbStudentSchedule.Location = new System.Drawing.Point(126, 6);
+            this.pbStudentSchedule.Name = "pbStudentSchedule";
+            this.pbStudentSchedule.Size = new System.Drawing.Size(405, 287);
+            this.pbStudentSchedule.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbStudentSchedule.TabIndex = 0;
+            this.pbStudentSchedule.TabStop = false;
             // 
             // StudentWindow
             // 
@@ -359,6 +372,8 @@
             this.tabStudentHome.ResumeLayout(false);
             this.tabStudentHome.PerformLayout();
             this.tabStudentAssessments.ResumeLayout(false);
+            this.tabStudentSchedule.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbStudentSchedule)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -391,5 +406,6 @@
         private System.Windows.Forms.Label lblDegree;
         public System.Windows.Forms.Label lblFacNumber;
         private System.Windows.Forms.Label lblDisciplinesTxt;
+        private System.Windows.Forms.PictureBox pbStudentSchedule;
     }
 }

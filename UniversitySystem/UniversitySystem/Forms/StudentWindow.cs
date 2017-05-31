@@ -28,6 +28,15 @@ namespace UniversitySystem.Forms
             rd.ReadDisciplines(path, lblSpecialty.Text, lblCourse.Text, disciplines);
 
             WriteDataToListBox(disciplines);
+
+            //SCHEDULE
+            switch (student.Course)
+            {
+                case 1: pbStudentSchedule.Image = UniversitySystem.Properties.Resources.ScheduleCourse1Semester1; break;
+                case 2: pbStudentSchedule.Image = UniversitySystem.Properties.Resources.ScheduleCourse2Semester1; break;
+                case 3: pbStudentSchedule.Image = UniversitySystem.Properties.Resources.ScheduleCourse3Semester1; break;
+                case 4: pbStudentSchedule.Image = UniversitySystem.Properties.Resources.ScheduleCourse4Semester1; break;
+            }
         }
 
         // LOG OUT BUTTON CLICK EVENT.

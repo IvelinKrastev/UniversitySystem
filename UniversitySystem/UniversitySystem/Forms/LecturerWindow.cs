@@ -120,5 +120,10 @@ namespace UniversitySystem.Forms
 
             Hide();
         }
+
+        private void pbLecturerPic_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
