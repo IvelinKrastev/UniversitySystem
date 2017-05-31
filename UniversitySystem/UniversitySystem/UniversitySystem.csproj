@@ -100,11 +100,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Database\UniversitySystemDatabaseDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UniversitySystemDatabaseDataSet.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Forms\LecturerWindow.resx">
       <DependentUpon>LecturerWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,17 +137,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Database\UniversitySystemDatabaseDataSet.xsc">
-      <DependentUpon>UniversitySystemDatabaseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Database\UniversitySystemDatabaseDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UniversitySystemDatabaseDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Database\UniversitySystemDatabaseDataSet.xss">
-      <DependentUpon>UniversitySystemDatabaseDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Shedules\STD_First_Course.pdf" />
     <None Include="Shedules\STD_Fourth_Course.pdf" />
     <None Include="Shedules\STD_Second_Course.pdf" />
@@ -162,13 +146,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\UniSystemDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database\UniSystemDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>UniSystemDatabase.mdf</DependentUpon>
-    </Content>
     <Content Include="Database_Data.txt" />
     <None Include="Resources\teacher-icon-71137.png" />
     <None Include="Resources\graduate-icon-7829.png" />
