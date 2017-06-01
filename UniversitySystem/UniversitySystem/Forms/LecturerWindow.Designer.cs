@@ -44,10 +44,13 @@
             this.tab = new System.Windows.Forms.TabPage();
             this.btnLogOutStudent = new System.Windows.Forms.Button();
             this.pbLecturerPic = new System.Windows.Forms.PictureBox();
+            this.pbLecturerWorkSchedule = new System.Windows.Forms.PictureBox();
             this.tabLecturer.SuspendLayout();
             this.tabLecturerHome.SuspendLayout();
             this.tabLecturerStudentAssessments.SuspendLayout();
+            this.tab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLecturerPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLecturerWorkSchedule)).BeginInit();
             this.SuspendLayout();
             // 
             // tabLecturer
@@ -258,6 +261,7 @@
             // 
             // tab
             // 
+            this.tab.Controls.Add(this.pbLecturerWorkSchedule);
             this.tab.Location = new System.Drawing.Point(4, 22);
             this.tab.Name = "tab";
             this.tab.Padding = new System.Windows.Forms.Padding(3);
@@ -288,6 +292,15 @@
             this.pbLecturerPic.TabStop = false;
             this.pbLecturerPic.Click += new System.EventHandler(this.pbLecturerPic_Click);
             // 
+            // pbLecturerWorkSchedule
+            // 
+            this.pbLecturerWorkSchedule.Location = new System.Drawing.Point(8, 8);
+            this.pbLecturerWorkSchedule.Name = "pbLecturerWorkSchedule";
+            this.pbLecturerWorkSchedule.Size = new System.Drawing.Size(669, 303);
+            this.pbLecturerWorkSchedule.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLecturerWorkSchedule.TabIndex = 0;
+            this.pbLecturerWorkSchedule.TabStop = false;
+            // 
             // LecturerWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,7 +322,9 @@
             this.tabLecturerHome.PerformLayout();
             this.tabLecturerStudentAssessments.ResumeLayout(false);
             this.tabLecturerStudentAssessments.PerformLayout();
+            this.tab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLecturerPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLecturerWorkSchedule)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -339,5 +354,6 @@
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblDegree;
         private System.Windows.Forms.Label lblDegreeTxt;
+        private System.Windows.Forms.PictureBox pbLecturerWorkSchedule;
     }
 }
