@@ -66,7 +66,7 @@ namespace UniversitySystem.Forms
                         tbWorkNumberLecturer.Text.Trim().Equals(lecturers[i].WorkNumber))
                     {
                         LecturerWindow lw = new LecturerWindow();
-                        lw.workNumber = tbWorkNumberLecturer.Text;
+                        lw.workNumber = tbWorkNumberLecturer.Text.Trim();
                         lw.Show();
 
                         Hide();

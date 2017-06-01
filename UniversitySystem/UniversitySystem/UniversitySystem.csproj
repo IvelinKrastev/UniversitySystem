@@ -86,6 +86,12 @@
     <Compile Include="Forms\NewGradeLecturer.Designer.cs">
       <DependentUpon>NewGradeLecturer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SheduleViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SheduleViewer.Designer.cs">
+      <DependentUpon>SheduleViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\StudentWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewGradeLecturer.resx">
       <DependentUpon>NewGradeLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SheduleViewer.resx">
+      <DependentUpon>SheduleViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StudentWindow.resx">
       <DependentUpon>StudentWindow.cs</DependentUpon>

@@ -55,12 +55,19 @@
             this.lbAssessmentsStudent = new System.Windows.Forms.ListBox();
             this.tabStudentSchedule = new System.Windows.Forms.TabPage();
             this.btnLogOutStudent = new System.Windows.Forms.Button();
-            this.pbStudentSchedule = new System.Windows.Forms.PictureBox();
+            this.lblTrimOneTxt = new System.Windows.Forms.Label();
+            this.lblTrimTwoTxt = new System.Windows.Forms.Label();
+            this.lblTrimThreeTxt = new System.Windows.Forms.Label();
+            this.pbScheduleTrimThree = new System.Windows.Forms.PictureBox();
+            this.pbScheduleTrimTwo = new System.Windows.Forms.PictureBox();
+            this.pbScheduleTrimOne = new System.Windows.Forms.PictureBox();
             this.tabStudent.SuspendLayout();
             this.tabStudentHome.SuspendLayout();
             this.tabStudentAssessments.SuspendLayout();
             this.tabStudentSchedule.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbStudentSchedule)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbScheduleTrimThree)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbScheduleTrimTwo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbScheduleTrimOne)).BeginInit();
             this.SuspendLayout();
             // 
             // tabStudent
@@ -322,7 +329,12 @@
             // tabStudentSchedule
             // 
             this.tabStudentSchedule.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabStudentSchedule.Controls.Add(this.pbStudentSchedule);
+            this.tabStudentSchedule.Controls.Add(this.lblTrimThreeTxt);
+            this.tabStudentSchedule.Controls.Add(this.lblTrimTwoTxt);
+            this.tabStudentSchedule.Controls.Add(this.lblTrimOneTxt);
+            this.tabStudentSchedule.Controls.Add(this.pbScheduleTrimThree);
+            this.tabStudentSchedule.Controls.Add(this.pbScheduleTrimTwo);
+            this.tabStudentSchedule.Controls.Add(this.pbScheduleTrimOne);
             this.tabStudentSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabStudentSchedule.Location = new System.Drawing.Point(4, 22);
             this.tabStudentSchedule.Name = "tabStudentSchedule";
@@ -343,14 +355,65 @@
             this.btnLogOutStudent.UseVisualStyleBackColor = false;
             this.btnLogOutStudent.Click += new System.EventHandler(this.btnLogOutStudent_Click);
             // 
-            // pbStudentSchedule
+            // lblTrimOneTxt
             // 
-            this.pbStudentSchedule.Location = new System.Drawing.Point(126, 6);
-            this.pbStudentSchedule.Name = "pbStudentSchedule";
-            this.pbStudentSchedule.Size = new System.Drawing.Size(405, 287);
-            this.pbStudentSchedule.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbStudentSchedule.TabIndex = 0;
-            this.pbStudentSchedule.TabStop = false;
+            this.lblTrimOneTxt.AutoSize = true;
+            this.lblTrimOneTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrimOneTxt.Location = new System.Drawing.Point(51, 54);
+            this.lblTrimOneTxt.Name = "lblTrimOneTxt";
+            this.lblTrimOneTxt.Size = new System.Drawing.Size(108, 16);
+            this.lblTrimOneTxt.TabIndex = 3;
+            this.lblTrimOneTxt.Text = "First Trimester";
+            // 
+            // lblTrimTwoTxt
+            // 
+            this.lblTrimTwoTxt.AutoSize = true;
+            this.lblTrimTwoTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrimTwoTxt.Location = new System.Drawing.Point(277, 54);
+            this.lblTrimTwoTxt.Name = "lblTrimTwoTxt";
+            this.lblTrimTwoTxt.Size = new System.Drawing.Size(131, 16);
+            this.lblTrimTwoTxt.TabIndex = 4;
+            this.lblTrimTwoTxt.Text = "Second Trimester";
+            // 
+            // lblTrimThreeTxt
+            // 
+            this.lblTrimThreeTxt.AutoSize = true;
+            this.lblTrimThreeTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrimThreeTxt.Location = new System.Drawing.Point(525, 54);
+            this.lblTrimThreeTxt.Name = "lblTrimThreeTxt";
+            this.lblTrimThreeTxt.Size = new System.Drawing.Size(114, 16);
+            this.lblTrimThreeTxt.TabIndex = 5;
+            this.lblTrimThreeTxt.Text = "Third Trimester";
+            // 
+            // pbScheduleTrimThree
+            // 
+            this.pbScheduleTrimThree.Location = new System.Drawing.Point(469, 73);
+            this.pbScheduleTrimThree.Name = "pbScheduleTrimThree";
+            this.pbScheduleTrimThree.Size = new System.Drawing.Size(210, 150);
+            this.pbScheduleTrimThree.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbScheduleTrimThree.TabIndex = 2;
+            this.pbScheduleTrimThree.TabStop = false;
+            this.pbScheduleTrimThree.Click += new System.EventHandler(this.pbScheduleTrimThree_Click);
+            // 
+            // pbScheduleTrimTwo
+            // 
+            this.pbScheduleTrimTwo.Location = new System.Drawing.Point(238, 73);
+            this.pbScheduleTrimTwo.Name = "pbScheduleTrimTwo";
+            this.pbScheduleTrimTwo.Size = new System.Drawing.Size(210, 150);
+            this.pbScheduleTrimTwo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbScheduleTrimTwo.TabIndex = 1;
+            this.pbScheduleTrimTwo.TabStop = false;
+            this.pbScheduleTrimTwo.Click += new System.EventHandler(this.pbScheduleTrimTwo_Click);
+            // 
+            // pbScheduleTrimOne
+            // 
+            this.pbScheduleTrimOne.Location = new System.Drawing.Point(6, 73);
+            this.pbScheduleTrimOne.Name = "pbScheduleTrimOne";
+            this.pbScheduleTrimOne.Size = new System.Drawing.Size(210, 150);
+            this.pbScheduleTrimOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbScheduleTrimOne.TabIndex = 0;
+            this.pbScheduleTrimOne.TabStop = false;
+            this.pbScheduleTrimOne.Click += new System.EventHandler(this.pbScheduleTrimOne_Click);
             // 
             // StudentWindow
             // 
@@ -373,7 +436,10 @@
             this.tabStudentHome.PerformLayout();
             this.tabStudentAssessments.ResumeLayout(false);
             this.tabStudentSchedule.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbStudentSchedule)).EndInit();
+            this.tabStudentSchedule.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbScheduleTrimThree)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbScheduleTrimTwo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbScheduleTrimOne)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -406,6 +472,11 @@
         private System.Windows.Forms.Label lblDegree;
         public System.Windows.Forms.Label lblFacNumber;
         private System.Windows.Forms.Label lblDisciplinesTxt;
-        private System.Windows.Forms.PictureBox pbStudentSchedule;
+        private System.Windows.Forms.Label lblTrimThreeTxt;
+        private System.Windows.Forms.Label lblTrimTwoTxt;
+        private System.Windows.Forms.Label lblTrimOneTxt;
+        public System.Windows.Forms.PictureBox pbScheduleTrimOne;
+        public System.Windows.Forms.PictureBox pbScheduleTrimThree;
+        public System.Windows.Forms.PictureBox pbScheduleTrimTwo;
     }
 }

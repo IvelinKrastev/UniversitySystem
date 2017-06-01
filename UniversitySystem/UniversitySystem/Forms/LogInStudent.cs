@@ -67,7 +67,7 @@ namespace UniversitySystem
                         tbIDNumberStudent.Text.Trim() == students[i].PersonalId)
                     {
                         StudentWindow sw = new StudentWindow();
-                        sw.lblFacNumber.Text = tbFNumberStudent.Text;
+                        sw.lblFacNumber.Text = tbFNumberStudent.Text.Trim();
                         sw.Show();
 
                         Hide();

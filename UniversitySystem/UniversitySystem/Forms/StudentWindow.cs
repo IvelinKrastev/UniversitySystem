@@ -3,6 +3,7 @@ using DataAccess.Repository;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace UniversitySystem.Forms
 {
@@ -29,14 +30,25 @@ namespace UniversitySystem.Forms
 
             WriteDataToListBox(disciplines);
 
-            //SCHEDULE
-            switch (student.Course)
-            {
-                case 1: pbStudentSchedule.Image = UniversitySystem.Properties.Resources.ScheduleCourse1Semester1; break;
-                case 2: pbStudentSchedule.Image = UniversitySystem.Properties.Resources.ScheduleCourse2Semester1; break;
-                case 3: pbStudentSchedule.Image = UniversitySystem.Properties.Resources.ScheduleCourse3Semester1; break;
-                case 4: pbStudentSchedule.Image = UniversitySystem.Properties.Resources.ScheduleCourse4Semester1; break;
-            }
+            SetSchedules(student);
+        }
+
+        // FIRST PICTUREBOX CLICK EVENT.
+        private void pbScheduleTrimOne_Click(object sender, EventArgs e)
+        {
+            ZoomPicture(pbScheduleTrimOne.Image);
+        }
+
+        // SECOND PICTUREBOX CLICK EVENT.
+        private void pbScheduleTrimTwo_Click(object sender, EventArgs e)
+        {
+            ZoomPicture(pbScheduleTrimTwo.Image);
+        }
+
+        // THIRD PICTUREBOX CLICK EVENT.
+        private void pbScheduleTrimThree_Click(object sender, EventArgs e)
+        {
+            ZoomPicture(pbScheduleTrimThree.Image);
         }
 
         // LOG OUT BUTTON CLICK EVENT.
@@ -60,7 +72,7 @@ namespace UniversitySystem.Forms
             else
                 e.Cancel = true;
         }
-        
+
         // FUNCTION THAT FILLS THE DATA FROM THE STUDENT OBJECT TO THE LABELS.
         private void WriteDataToLabels(Student student)
         {
@@ -92,6 +104,42 @@ namespace UniversitySystem.Forms
             welcome.Show();
 
             Hide();
+        }
+
+        // FUNCTION WHICH SETS THE IMAGES FOR SCHEDULE BY COURSE OF STUDENT.
+        private void SetSchedules(Student student)
+        {
+            switch (student.Course)
+            {
+                case 1:
+                    pbScheduleTrimOne.Image = Properties.Resources.ScheduleCourse1Semester1;
+                    pbScheduleTrimTwo.Image = Properties.Resources.ScheduleCourse1Semester2;
+                    pbScheduleTrimThree.Image = Properties.Resources.ScheduleCourse1Semester3;
+                    break;
+                case 2:
+                    pbScheduleTrimOne.Image = Properties.Resources.ScheduleCourse2Semester1;
+                    pbScheduleTrimTwo.Image = Properties.Resources.ScheduleCourse2Semester2;
+                    pbScheduleTrimThree.Image = Properties.Resources.ScheduleCourse2Semester3;
+                    break;
+                case 3:
+                    pbScheduleTrimOne.Image = Properties.Resources.ScheduleCourse3Semester1;
+                    pbScheduleTrimTwo.Image = Properties.Resources.ScheduleCourse3Semester2;
+                    pbScheduleTrimThree.Image = Properties.Resources.ScheduleCourse3Semester3;
+                    break;
+                case 4:
+                    pbScheduleTrimOne.Image = Properties.Resources.ScheduleCourse4Semester1;
+                    pbScheduleTrimTwo.Image = Properties.Resources.ScheduleCourse4Semester2;
+                    pbScheduleTrimThree.Image = Properties.Resources.ScheduleCourse4Semester3;
+                    break;
+            }
+        }
+
+        // FUNCTION THAT ZOOMS THE PICTURE FROM THE PICTUREBOX IN ANOTHER FORM.
+        private void ZoomPicture(Image image)
+        {
+            SheduleViewer sv = new SheduleViewer();
+            sv.pbShedule.Image = image;
+            sv.Show();
         }
     }
 }
