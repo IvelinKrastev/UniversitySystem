@@ -38,6 +38,17 @@ namespace UniversitySystem.Forms
             path = "Disciplines.txt";
             rd.ReadDisciplines(path, workNumber, disciplines);
             WriteDataToListBox(disciplines);
+            //SCHEDULES
+            switch (lecturer.WorkNumber)
+            {
+                case "123": pbLecturerWorkSchedule.Image = UniversitySystem.Properties.Resources.WorkSchedule_123; break;
+                case "124": pbLecturerWorkSchedule.Image = UniversitySystem.Properties.Resources.WorkSchedule_124; break;
+                case "125": pbLecturerWorkSchedule.Image = UniversitySystem.Properties.Resources.WorkSchedule_125; break;
+                case "126": pbLecturerWorkSchedule.Image = UniversitySystem.Properties.Resources.WorkSchedule_126; break;
+                case "129": pbLecturerWorkSchedule.Image = UniversitySystem.Properties.Resources.WorkSchedule_129; break;
+                case "134": pbLecturerWorkSchedule.Image = UniversitySystem.Properties.Resources.WorkSchedule_134; break;
+                case "200": pbLecturerWorkSchedule.Image = UniversitySystem.Properties.Resources.WorkSchedule_200; break;
+            }
         }
 
         // LOGOUT BUTTON CLICK EVENT.

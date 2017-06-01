@@ -137,6 +137,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Shedules\Lecturer Timetables.xlsx" />
     <None Include="Shedules\STD_First_Course.pdf" />
     <None Include="Shedules\STD_Fourth_Course.pdf" />
     <None Include="Shedules\STD_Second_Course.pdf" />
@@ -147,6 +148,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database_Data.txt" />
+    <None Include="Resources\WorkSchedule-200.PNG" />
+    <None Include="Resources\WorkSchedule-134.PNG" />
+    <None Include="Resources\WorkSchedule-129.PNG" />
+    <None Include="Resources\WorkSchedule-126.PNG" />
+    <None Include="Resources\WorkSchedule-125.PNG" />
+    <None Include="Resources\WorkSchedule-124.PNG" />
+    <None Include="Resources\WorkSchedule-123.PNG" />
     <None Include="Resources\ScheduleCourse4Semester3.PNG" />
     <None Include="Resources\ScheduleCourse4Semester2.PNG" />
     <None Include="Resources\ScheduleCourse4Semester1.PNG" />
