@@ -44,10 +44,3 @@ FROM TABLE [GRADES]
 	8. 8 - 1401681001 - Software Technologies And Design - 3 - 1a - 11 - 5.89 - 123  
 	9. 9 - 1301681089 - Software Technologies And Design - 4 - 3b - 12 - 5 - 126  
 	10. 10 - 1301681089 - Software Technologies And Design - 4 - 3b - 13 - 3.9 - 126  
-
-
-FROM TABLE [SHEDULES]
-	1. 1 - Software Technologies And Design - 1 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Shedules\STD_First_Course.pdf
-	2. 2 - Software Technologies And Design - 2 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Shedules\STD_Second_Course.pdf
-	3. 3 - Software Technologies And Design - 3 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Shedules\STD_Third_Course.pdf
-	4. 4 - Software Technologies And Design - 4 - C:\Users\iveli\Source\Repos\UniversitySystem\UniversitySystem\UniversitySystem\Shedules\STD_Fourth_Course.pdf
