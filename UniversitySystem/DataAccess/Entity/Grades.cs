@@ -9,5 +9,6 @@ namespace DataAccess.Entity
         public string DisciplineName { get; set; }
         public double Grade { get; set; }
         public double Lecturer { get; set; }
+        public string DisciplineId { get; set; }
     }
 }
