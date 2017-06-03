@@ -29,8 +29,9 @@ namespace UniversitySystem.Forms
 
             path = "Disciplines.txt";
             rd.ReadDisciplines(path, lblSpecialty.Text, lblCourse.Text, disciplines);
+
             path = "Grades.txt";
-            rd.ReadGrades(path, lblFacNumber.Text,grades);
+            rd.ReadGradesForStudent(path, lblFacNumber.Text, grades);
 
 
             WriteDataToListBox(disciplines);
@@ -147,17 +148,14 @@ namespace UniversitySystem.Forms
             sv.pbShedule.Image = image;
             sv.Show();
         }
-        //FUNCTION THAT FILLS THE ASSESSMENTS LIST BOX WITH DATA
+
+        // FUNCTION THAT FILLS THE ASSESSMENTS LIST BOX WITH DATA.
         private void WriteGrades(List<Grades> grades)
         {
-           // string lecturerName = null;
             int counter = 1;
             foreach (Grades g in grades)
             {
-                
-
-                
-                lbAssessmentsStudent.Items.Add(counter.ToString() + ". Discipline: " + g.DisciplineName+" ----- Grade: "+g.Grade.ToString());
+                lbAssessmentsStudent.Items.Add(counter.ToString() + ". Discipline: " + g.DisciplineName + " ----- Grade: " + g.Grade.ToString());
                 counter++;
             }
         }

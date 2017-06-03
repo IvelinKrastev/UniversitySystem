@@ -140,7 +140,7 @@ namespace DataAccess.Repository
         }
 
         // FUNCTION WHICH RETRIEVES THE NEEDED DATA FOR THE STUDENT WINDOW FROM THE [GRADES] TABLE.
-        public void ReadGrades(string path, string fNumber, List<Grades> grades)
+        public void ReadGradesForStudent(string path, string fNumber, List<Grades> grades)
         {
             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
@@ -150,34 +150,45 @@ namespace DataAccess.Repository
                     while (!reader.EndOfStream)
                     {
                         string[] split = reader.ReadLine().Split('-');
-                        bool visited = false;
-                        int number = int.Parse(split[1]);
-                        int number2 = int.Parse(fNumber);
-                        if (number==number2)
+
+                        if (split[0].Equals(fNumber))
                         {
-                            visited = true;
                             Grades g = new Grades();
-                            switch(split[0].Trim()){
-                                case "1": g.DisciplineName = "Introduction to Programming with C#"; break;
-                                case "2": g.DisciplineName = "Introduction to IT";break;
-                                case "3": g.DisciplineName = "English"; break;
-                                case "4": g.DisciplineName = "Graphic Design"; break;
-                                case "5": g.DisciplineName = "Sport"; break;
-                                case "6": g.DisciplineName = "Object-Oriented Programming"; break;
-                                case "7": g.DisciplineName = "Event Programming"; break;
-                                case "8": g.DisciplineName = "Geometric Design"; break;
-                                case "9": g.DisciplineName = "Databases"; break;
-                                case "10": g.DisciplineName = "Vector Images"; break;
-                                case "11": g.DisciplineName = "Design Of Mobile Applications"; break;
-                                case "12": g.DisciplineName = "Design Of 3D Models"; break;
-                                case "13": g.DisciplineName = "Framework Systems For Web Programming"; break;
-                            }
-                            string grade = split[6].Trim();
-                            g.Grade = double.Parse(grade);
-                            string lecturerID = split[7].Trim();
-                            g.Lecturer = double.Parse(lecturerID);
-                            grades.Add(g);   
-                            
+
+                            g.DisciplineName = split[4];
+                            g.Grade = double.Parse(split[5]);
+
+                            grades.Add(g);
+                        }
+                    }
+                }
+            }
+        }
+
+        // FUNCTION WHICH RETRIEVES THE NEEDED DATA FOR THE LECTURER WINDOW FROM THE [GRADES] TABLE.
+        public void ReadGradesForLecturer(string path, string workNumber, List<Grades> grades)
+        {
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+            {
+                using (StreamReader reader = new StreamReader(fs))
+                {
+                    // READING FROM THE TABLE [GRADES].
+                    while (!reader.EndOfStream)
+                    {
+                        string[] split = reader.ReadLine().Split('-');
+
+                        if (split[6].Equals(workNumber))
+                        {
+                            Grades g = new Grades();
+
+                            g.FacultyNumberOfStudent = split[0];
+                            g.Specialty = split[1];
+                            g.Course = byte.Parse(split[2]);
+                            g.Group = split[3];
+                            g.DisciplineName = split[4];
+                            g.Grade = double.Parse(split[5]);
+
+                            grades.Add(g);
                         }
                     }
                 }
@@ -199,7 +210,7 @@ namespace DataAccess.Repository
                         if (split[4].Equals(workNumber))
                         {
                             Discipline d = new Discipline();
-
+                            
                             d.DisciplineName = split[1];
                             d.Specialty = split[2];
                             d.Course = byte.Parse(split[3]);

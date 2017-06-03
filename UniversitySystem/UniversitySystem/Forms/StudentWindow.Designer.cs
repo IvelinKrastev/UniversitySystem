@@ -54,13 +54,13 @@
             this.tabStudentAssessments = new System.Windows.Forms.TabPage();
             this.lbAssessmentsStudent = new System.Windows.Forms.ListBox();
             this.tabStudentSchedule = new System.Windows.Forms.TabPage();
-            this.btnLogOutStudent = new System.Windows.Forms.Button();
-            this.lblTrimOneTxt = new System.Windows.Forms.Label();
-            this.lblTrimTwoTxt = new System.Windows.Forms.Label();
             this.lblTrimThreeTxt = new System.Windows.Forms.Label();
+            this.lblTrimTwoTxt = new System.Windows.Forms.Label();
+            this.lblTrimOneTxt = new System.Windows.Forms.Label();
             this.pbScheduleTrimThree = new System.Windows.Forms.PictureBox();
             this.pbScheduleTrimTwo = new System.Windows.Forms.PictureBox();
             this.pbScheduleTrimOne = new System.Windows.Forms.PictureBox();
+            this.btnLogOutStudent = new System.Windows.Forms.Button();
             this.tabStudent.SuspendLayout();
             this.tabStudentHome.SuspendLayout();
             this.tabStudentAssessments.SuspendLayout();
@@ -320,7 +320,9 @@
             // 
             this.lbAssessmentsStudent.BackColor = System.Drawing.Color.Gainsboro;
             this.lbAssessmentsStudent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbAssessmentsStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAssessmentsStudent.FormattingEnabled = true;
+            this.lbAssessmentsStudent.ItemHeight = 15;
             this.lbAssessmentsStudent.Location = new System.Drawing.Point(3, 3);
             this.lbAssessmentsStudent.Name = "lbAssessmentsStudent";
             this.lbAssessmentsStudent.Size = new System.Drawing.Size(679, 293);
@@ -343,27 +345,15 @@
             this.tabStudentSchedule.TabIndex = 2;
             this.tabStudentSchedule.Text = "Schedule";
             // 
-            // btnLogOutStudent
+            // lblTrimThreeTxt
             // 
-            this.btnLogOutStudent.BackColor = System.Drawing.Color.LightGray;
-            this.btnLogOutStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOutStudent.Location = new System.Drawing.Point(591, 331);
-            this.btnLogOutStudent.Name = "btnLogOutStudent";
-            this.btnLogOutStudent.Size = new System.Drawing.Size(98, 42);
-            this.btnLogOutStudent.TabIndex = 15;
-            this.btnLogOutStudent.Text = "Log Out";
-            this.btnLogOutStudent.UseVisualStyleBackColor = false;
-            this.btnLogOutStudent.Click += new System.EventHandler(this.btnLogOutStudent_Click);
-            // 
-            // lblTrimOneTxt
-            // 
-            this.lblTrimOneTxt.AutoSize = true;
-            this.lblTrimOneTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrimOneTxt.Location = new System.Drawing.Point(51, 54);
-            this.lblTrimOneTxt.Name = "lblTrimOneTxt";
-            this.lblTrimOneTxt.Size = new System.Drawing.Size(108, 16);
-            this.lblTrimOneTxt.TabIndex = 3;
-            this.lblTrimOneTxt.Text = "First Trimester";
+            this.lblTrimThreeTxt.AutoSize = true;
+            this.lblTrimThreeTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrimThreeTxt.Location = new System.Drawing.Point(525, 54);
+            this.lblTrimThreeTxt.Name = "lblTrimThreeTxt";
+            this.lblTrimThreeTxt.Size = new System.Drawing.Size(114, 16);
+            this.lblTrimThreeTxt.TabIndex = 5;
+            this.lblTrimThreeTxt.Text = "Third Trimester";
             // 
             // lblTrimTwoTxt
             // 
@@ -375,15 +365,15 @@
             this.lblTrimTwoTxt.TabIndex = 4;
             this.lblTrimTwoTxt.Text = "Second Trimester";
             // 
-            // lblTrimThreeTxt
+            // lblTrimOneTxt
             // 
-            this.lblTrimThreeTxt.AutoSize = true;
-            this.lblTrimThreeTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrimThreeTxt.Location = new System.Drawing.Point(525, 54);
-            this.lblTrimThreeTxt.Name = "lblTrimThreeTxt";
-            this.lblTrimThreeTxt.Size = new System.Drawing.Size(114, 16);
-            this.lblTrimThreeTxt.TabIndex = 5;
-            this.lblTrimThreeTxt.Text = "Third Trimester";
+            this.lblTrimOneTxt.AutoSize = true;
+            this.lblTrimOneTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrimOneTxt.Location = new System.Drawing.Point(51, 54);
+            this.lblTrimOneTxt.Name = "lblTrimOneTxt";
+            this.lblTrimOneTxt.Size = new System.Drawing.Size(108, 16);
+            this.lblTrimOneTxt.TabIndex = 3;
+            this.lblTrimOneTxt.Text = "First Trimester";
             // 
             // pbScheduleTrimThree
             // 
@@ -414,6 +404,18 @@
             this.pbScheduleTrimOne.TabIndex = 0;
             this.pbScheduleTrimOne.TabStop = false;
             this.pbScheduleTrimOne.Click += new System.EventHandler(this.pbScheduleTrimOne_Click);
+            // 
+            // btnLogOutStudent
+            // 
+            this.btnLogOutStudent.BackColor = System.Drawing.Color.LightGray;
+            this.btnLogOutStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOutStudent.Location = new System.Drawing.Point(591, 331);
+            this.btnLogOutStudent.Name = "btnLogOutStudent";
+            this.btnLogOutStudent.Size = new System.Drawing.Size(98, 42);
+            this.btnLogOutStudent.TabIndex = 15;
+            this.btnLogOutStudent.Text = "Log Out";
+            this.btnLogOutStudent.UseVisualStyleBackColor = false;
+            this.btnLogOutStudent.Click += new System.EventHandler(this.btnLogOutStudent_Click);
             // 
             // StudentWindow
             // 

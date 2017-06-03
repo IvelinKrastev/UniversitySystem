@@ -25,6 +25,7 @@ namespace UniversitySystem.Forms
 
         Lecturer lecturer = new Lecturer();
         List<Discipline> disciplines = new List<Discipline>();
+        List<Grades> grades = new List<Grades>();
 
         // FORM LOAD EVENT.
         private void LecturerWindow_Load(object sender, EventArgs e)
@@ -38,17 +39,19 @@ namespace UniversitySystem.Forms
             path = "Disciplines.txt";
             rd.ReadDisciplines(path, workNumber, disciplines);
             WriteDataToListBox(disciplines);
-            //SCHEDULES
-            switch (lecturer.WorkNumber)
+
+            path = "Grades.txt";
+            rd.ReadGradesForLecturer(path, lecturer.WorkNumber, grades);
+
+            for (int i = 0; i < grades.Count; i++)
             {
-                case "123": pbLecturerWorkSchedule.Image = UniversitySystem.Properties.Resources.WorkSchedule_123; break;
-                case "124": pbLecturerWorkSchedule.Image = UniversitySystem.Properties.Resources.WorkSchedule_124; break;
-                case "125": pbLecturerWorkSchedule.Image = UniversitySystem.Properties.Resources.WorkSchedule_125; break;
-                case "126": pbLecturerWorkSchedule.Image = UniversitySystem.Properties.Resources.WorkSchedule_126; break;
-                case "129": pbLecturerWorkSchedule.Image = UniversitySystem.Properties.Resources.WorkSchedule_129; break;
-                case "134": pbLecturerWorkSchedule.Image = UniversitySystem.Properties.Resources.WorkSchedule_134; break;
-                case "200": pbLecturerWorkSchedule.Image = UniversitySystem.Properties.Resources.WorkSchedule_200; break;
+                int counter = i + 1;
+
+                lbGrades.Items.Add(counter + ". Fac. Number: " + grades[i].FacultyNumberOfStudent + " ----- Discipline: " + 
+                    grades[i].DisciplineName + " ----- Grade: " + grades[i].Grade);
             }
+
+            SetSchedules(lecturer);
         }
 
         // LOGOUT BUTTON CLICK EVENT.
@@ -60,7 +63,7 @@ namespace UniversitySystem.Forms
                 OpenWelcomeForm();
             }
         }
-        
+
         // FORM CLOSING EVENT.
         private void LecturerWindow_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -123,6 +126,34 @@ namespace UniversitySystem.Forms
             }
         }
 
+        // FUNCTION WHICH SETS THE IMAGE FOR SCHEDULE BY WORK NUMBER OF LECTURER.
+        private void SetSchedules(Lecturer lecturer)
+        {
+            switch (lecturer.WorkNumber)
+            {
+                case "123":
+                    pbLecturerWorkSchedule.Image = Properties.Resources.WorkSchedule_123;
+                    break;
+                case "124":
+                    pbLecturerWorkSchedule.Image = Properties.Resources.WorkSchedule_124; break;
+                case "125":
+                    pbLecturerWorkSchedule.Image = Properties.Resources.WorkSchedule_125;
+                    break;
+                case "126":
+                    pbLecturerWorkSchedule.Image = Properties.Resources.WorkSchedule_126;
+                    break;
+                case "129":
+                    pbLecturerWorkSchedule.Image = Properties.Resources.WorkSchedule_129;
+                    break;
+                case "134":
+                    pbLecturerWorkSchedule.Image = Properties.Resources.WorkSchedule_134;
+                    break;
+                case "200":
+                    pbLecturerWorkSchedule.Image = Properties.Resources.WorkSchedule_200;
+                    break;
+            }
+        }
+
         // FUNCTION WHICH OPENS THE WELCOME FORM AND HIDES THE CURRENT.
         private void OpenWelcomeForm()
         {
@@ -130,11 +161,6 @@ namespace UniversitySystem.Forms
             welcome.Show();
 
             Hide();
-        }
-
-        private void pbLecturerPic_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
