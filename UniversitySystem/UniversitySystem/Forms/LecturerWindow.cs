@@ -49,7 +49,7 @@ namespace UniversitySystem.Forms
         private void lbGrades_SelectedIndexChanged(object sender, EventArgs e)
         {
             index = lbGrades.SelectedIndex;
-            
+
             if (index != -1)
             {
                 newGrade.FacultyNumberOfStudent = grades[lbGrades.SelectedIndex].FacultyNumberOfStudent;
@@ -77,7 +77,7 @@ namespace UniversitySystem.Forms
             if (MessageBox.Show("Are you sure you want to edit the grade", "Edit the grade?", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                double grade;
+                double grade = 0;
                 if (tbGrade.Text != newGrade.Grade && double.TryParse(tbGrade.Text, out grade) &&
                     grade >= 2 && grade <= 6)
                 {
@@ -87,8 +87,10 @@ namespace UniversitySystem.Forms
                     ReadData rd = new ReadData();
                     rd.ReadTableData(path, allGrades);
 
+                    string discipline = grades[index].DisciplineName;
+
                     WriteData wd = new WriteData();
-                    wd.UpdateGrades(path, allGrades, lbGrades.SelectedIndex, grade);
+                    wd.UpdateGrades(path, allGrades, tbFacNumber.Text, discipline, grade);
 
                     grades.Clear();
                     rd.ReadGradesForLecturer(path, lecturer.WorkNumber, grades);
@@ -99,6 +101,8 @@ namespace UniversitySystem.Forms
                     tbFacNumber.Text = "";
                     tbSpecialty.Text = "";
                     tbGrade.Text = "";
+
+                    btnEdit.Enabled = false;
                 }
                 else
                 {
