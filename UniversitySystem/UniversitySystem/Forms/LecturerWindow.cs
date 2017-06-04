@@ -92,6 +92,11 @@ namespace UniversitySystem.Forms
 
                     lbGrades.Items.Clear();
                     ShowGrades(grades);
+
+                    tbFacNumber.Text = "";
+                    tbSpecialty.Text = "";
+                    tbGrade.Text = "";
+                    btnEdit.Enabled = false;
                 }
                 else
                 {
