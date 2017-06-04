@@ -7,7 +7,7 @@
         public byte Course { get; set; }
         public string Group { get; set; }
         public string DisciplineName { get; set; }
-        public double Grade { get; set; }
-        public double LecturerNumber { get; set; }
+        public string Grade { get; set; }
+        public string LecturerNumber { get; set; }
     }
 }

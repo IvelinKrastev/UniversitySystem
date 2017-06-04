@@ -130,6 +130,9 @@
   <data name="Ivailov" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Lecturer_Pictures\Ivailov.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Karadocheva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Lecturer_Pictures\Terzieva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Lecturer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\teacher-icon-71137.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -171,9 +174,6 @@
   </data>
   <data name="Student" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\graduate-icon-7829.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Terzieva" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Lecturer_Pictures\Terzieva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Tyankova" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Lecturer_Pictures\Tyankova.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

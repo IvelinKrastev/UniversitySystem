@@ -3,7 +3,7 @@
 3-English-Software Technologies And Design-1-134
 4-Graphic Design-Software Technologies And Design-1-125
 5-Sport-Software Technologies And Design-1-200
-6-Object-Oriented Programming-Software Technologies And Design-1-126
+6-Object Oriented Programming-Software Technologies And Design-1-126
 7-Event Programming-Software Technologies And Design-2-124
 8-Geometric Design-Software Technologies And Design-2-129
 9-Databases-Software Technologies And Design-2-126

@@ -50,7 +50,7 @@ namespace DataAccess.Repository
                 }
             }
         }
-        
+
         // FUNCTION WHICH RETRIEVES THE NEEDED DATA FOR THE STUDENT WINDOW.
         public void ReadTableData(string path, string facNumber, Student student)
         {
@@ -111,6 +111,33 @@ namespace DataAccess.Repository
             }
         }
 
+        // FUNCTION WHICH RETRIEVES THE NEEDED DATA FROM THE GRADES FILE.
+        public void ReadTableData(string path, List<Grades> grades)
+        {
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+            {
+                using (StreamReader reader = new StreamReader(fs))
+                {
+                    // READING FROM THE TABLE [STUDENTS].
+                    while (!reader.EndOfStream)
+                    {
+                        string[] split = reader.ReadLine().Split('-');
+                        Grades g = new Grades();
+
+                        g.FacultyNumberOfStudent = split[0];
+                        g.Specialty = split[1];
+                        g.Course = byte.Parse(split[2]);
+                        g.Group = split[3];
+                        g.DisciplineName = split[4];
+                        g.Grade = split[5];
+                        g.LecturerNumber = split[6];
+
+                        grades.Add(g);
+                    }
+                }
+            }
+        }
+
         // FUNCTION WHICH RETRIEVES THE NEEDED DATA FOR THE STUDENT WINDOW FROM THE [DISCIPLINES] TABLE.
         public void ReadDisciplines(string path, string specialty, string course, List<Discipline> disciplines)
         {
@@ -139,6 +166,35 @@ namespace DataAccess.Repository
             }
         }
 
+        // FUNCTION WHICH RETRIEVES THE NEEDED DATA FOR THE LECTURER WINDOW FROM THE [DISCIPLINES] TABLE.
+        public void ReadDisciplines(string path, string workNumber, List<Discipline> disciplines)
+        {
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+            {
+                using (StreamReader reader = new StreamReader(fs))
+                {
+                    // READING FROM THE TABLE [DISCIPLINES].
+                    while (!reader.EndOfStream)
+                    {
+                        string[] split = reader.ReadLine().Split('-');
+
+                        if (split[4].Equals(workNumber))
+                        {
+                            Discipline d = new Discipline();
+
+                            d.DisciplineId = int.Parse(split[0]);
+                            d.DisciplineName = split[1];
+                            d.Specialty = split[2];
+                            d.Course = byte.Parse(split[3]);
+                            d.LecturerWorkNumber = workNumber;
+
+                            disciplines.Add(d);
+                        }
+                    }
+                }
+            }
+        }
+
         // FUNCTION WHICH RETRIEVES THE NEEDED DATA FOR THE STUDENT WINDOW FROM THE [GRADES] TABLE.
         public void ReadGradesForStudent(string path, string fNumber, List<Grades> grades)
         {
@@ -156,7 +212,7 @@ namespace DataAccess.Repository
                             Grades g = new Grades();
 
                             g.DisciplineName = split[4];
-                            g.Grade = double.Parse(split[5]);
+                            g.Grade = split[5];
 
                             grades.Add(g);
                         }
@@ -186,37 +242,9 @@ namespace DataAccess.Repository
                             g.Course = byte.Parse(split[2]);
                             g.Group = split[3];
                             g.DisciplineName = split[4];
-                            g.Grade = double.Parse(split[5]);
+                            g.Grade = split[5];
 
                             grades.Add(g);
-                        }
-                    }
-                }
-            }
-        }
-
-        // FUNCTION WHICH RETRIEVES THE NEEDED DATA FOR THE LECTURER WINDOW FROM THE [DISCIPLINES] TABLE.
-        public void ReadDisciplines(string path, string workNumber, List<Discipline> disciplines)
-        {
-            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
-            {
-                using (StreamReader reader = new StreamReader(fs))
-                {
-                    // READING FROM THE TABLE [DISCIPLINES].
-                    while (!reader.EndOfStream)
-                    {
-                        string[] split = reader.ReadLine().Split('-');
-
-                        if (split[4].Equals(workNumber))
-                        {
-                            Discipline d = new Discipline();
-                            
-                            d.DisciplineName = split[1];
-                            d.Specialty = split[2];
-                            d.Course = byte.Parse(split[3]);
-                            d.LecturerWorkNumber = workNumber;
-
-                            disciplines.Add(d);
                         }
                     }
                 }

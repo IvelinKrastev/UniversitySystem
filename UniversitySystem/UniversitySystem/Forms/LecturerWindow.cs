@@ -2,15 +2,7 @@
 using DataAccess.Repository;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
 
 namespace UniversitySystem.Forms
 {
@@ -24,8 +16,12 @@ namespace UniversitySystem.Forms
         public string workNumber;
 
         Lecturer lecturer = new Lecturer();
+
         List<Discipline> disciplines = new List<Discipline>();
         List<Grades> grades = new List<Grades>();
+        List<Student> students = new List<Student>();
+        
+        Grades newGrade = new Grades();
 
         // FORM LOAD EVENT.
         private void LecturerWindow_Load(object sender, EventArgs e)
@@ -42,16 +38,67 @@ namespace UniversitySystem.Forms
 
             path = "Grades.txt";
             rd.ReadGradesForLecturer(path, lecturer.WorkNumber, grades);
-
-            for (int i = 0; i < grades.Count; i++)
-            {
-                int counter = i + 1;
-
-                lbGrades.Items.Add(counter + ". Fac. Number: " + grades[i].FacultyNumberOfStudent + " ----- Discipline: " + 
-                    grades[i].DisciplineName + " ----- Grade: " + grades[i].Grade);
-            }
+            
+            ShowGrades(grades);
 
             SetSchedules(lecturer);
+        }
+
+        // LIST BOX INDEX CHANGED EVENT.
+        private void lbGrades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbGrades.SelectedIndex != -1)
+            {
+                newGrade.FacultyNumberOfStudent = grades[lbGrades.SelectedIndex].FacultyNumberOfStudent;
+                newGrade.Specialty = grades[lbGrades.SelectedIndex].Specialty;
+                newGrade.Grade = grades[lbGrades.SelectedIndex].Grade;
+
+                tbFacNumber.Text = newGrade.FacultyNumberOfStudent;
+                tbSpecialty.Text = newGrade.Specialty;
+                tbGrade.Text = newGrade.Grade;
+
+                btnEdit.Enabled = true;
+            }
+            else
+            {
+                tbSpecialty.Text = "";
+                tbGrade.Text = "";
+
+                btnEdit.Enabled = false;
+            }
+        }
+
+        // BUTTON EDIT GRADE CLICK EVENT.
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to edit the grade", "Edit the grade?", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                double grade;
+                if (tbGrade.Text != newGrade.Grade && double.TryParse(tbGrade.Text, out grade) &&
+                    grade >= 2 && grade <= 6)
+                {
+                    path = "Grades.txt";
+                    List<Grades> allGrades = new List<Grades>();
+
+                    ReadData rd = new ReadData();
+                    rd.ReadTableData(path, allGrades);
+
+                    WriteData wd = new WriteData();
+                    wd.UpdateGrades(path, allGrades, lbGrades.SelectedIndex, grade);
+
+                    grades.Clear();
+                    rd.ReadGradesForLecturer(path, lecturer.WorkNumber, grades);
+
+                    lbGrades.Items.Clear();
+                    ShowGrades(grades);
+                }
+                else
+                {
+                    MessageBox.Show("The grade is the same or it is not valid!", "Invalid or same grade!", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
         }
 
         // LOGOUT BUTTON CLICK EVENT.
@@ -120,8 +167,8 @@ namespace UniversitySystem.Forms
                 case "Anastasov.jpg":
                     pbLecturerPic.Image = Properties.Resources.Anastasov;
                     break;
-                case "Terzieva.jpg":
-                    pbLecturerPic.Image = Properties.Resources.Terzieva;
+                case "Karadocheva.jpg":
+                    pbLecturerPic.Image = Properties.Resources.Karadocheva;
                     break;
             }
         }
@@ -161,6 +208,35 @@ namespace UniversitySystem.Forms
             welcome.Show();
 
             Hide();
+        }
+
+        // FUNCTION THAT SHOWS ALL OF THE GRADES.
+        private void ShowGrades(List<Grades> grades)
+        {
+            lbGrades.Items.Clear();
+            for (int i = 0; i < grades.Count; i++)
+            {
+                int counter = i + 1;
+
+                lbGrades.Items.Add(counter + ". Fac. Number: " + grades[i].FacultyNumberOfStudent + " ----- Discipline: " +
+                    grades[i].DisciplineName + " ----- Grade: " + grades[i].Grade);
+            }
+        }
+
+        // FUNCTION THAT SHOWS GRADES ON A CONDITION.
+        private void ShowGrades(List<Grades> grades, string text)
+        {
+            lbGrades.Items.Clear();
+            for (int i = 0; i < grades.Count; i++)
+            {
+                int counter = i + 1;
+
+                if (grades[i].FacultyNumberOfStudent.StartsWith(text))
+                {
+                    lbGrades.Items.Add(counter + ". Fac. Number: " + grades[i].FacultyNumberOfStudent + " ----- Discipline: " +
+                    grades[i].DisciplineName + " ----- Grade: " + grades[i].Grade);
+                }
+            }
         }
     }
 }

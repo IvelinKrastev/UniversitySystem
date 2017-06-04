@@ -10,6 +10,6 @@
         public byte Course { get; set; }
         public string Group { get; set; }
         public int SheduleId { get; set; }
-        public string DisciplinesId { get; set; }
+        public string DisciplinesIDs { get; set; }
     }
 }

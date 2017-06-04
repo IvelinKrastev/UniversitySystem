@@ -103,6 +103,16 @@ namespace UniversitySystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Karadocheva {
+            get {
+                object obj = ResourceManager.GetObject("Karadocheva", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lecturer {
             get {
                 object obj = ResourceManager.GetObject("Lecturer", resourceCulture);
@@ -236,16 +246,6 @@ namespace UniversitySystem.Properties {
         internal static System.Drawing.Bitmap Student {
             get {
                 object obj = ResourceManager.GetObject("Student", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Terzieva {
-            get {
-                object obj = ResourceManager.GetObject("Terzieva", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
