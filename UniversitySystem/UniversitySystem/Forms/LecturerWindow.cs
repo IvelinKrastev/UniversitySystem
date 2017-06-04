@@ -22,6 +22,7 @@ namespace UniversitySystem.Forms
         List<Student> students = new List<Student>();
         
         Grades newGrade = new Grades();
+        int index = -1;
 
         // FORM LOAD EVENT.
         private void LecturerWindow_Load(object sender, EventArgs e)
@@ -47,7 +48,9 @@ namespace UniversitySystem.Forms
         // LIST BOX INDEX CHANGED EVENT.
         private void lbGrades_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lbGrades.SelectedIndex != -1)
+            index = lbGrades.SelectedIndex;
+            
+            if (index != -1)
             {
                 newGrade.FacultyNumberOfStudent = grades[lbGrades.SelectedIndex].FacultyNumberOfStudent;
                 newGrade.Specialty = grades[lbGrades.SelectedIndex].Specialty;
@@ -92,6 +95,7 @@ namespace UniversitySystem.Forms
 
                     lbGrades.Items.Clear();
                     ShowGrades(grades);
+                    lbGrades.SelectedIndex = index;
                 }
                 else
                 {

@@ -9,7 +9,7 @@ namespace DataAccess.Repository
     {
         public void UpdateGrades(string path, List<Grades> allGrades, int index, double grade)
         {
-            using (FileStream fs = new FileStream(path, FileMode.Create))
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
