@@ -1,0 +1,34 @@
+1601681009-Software Technologies And Design-1-1a-Introduction to Programming with C#-6-123
+1601681009-Software Technologies And Design-1-1a-Introduction to IT-4.24-124
+1601681009-Software Technologies And Design-1-1a-English-4.84-134
+1601681009-Software Technologies And Design-1-1a-Graphic Design-5-125
+1601681009-Software Technologies And Design-1-1a-Sport-3-200
+1601681009-Software Technologies And Design-1-1a-Object Oriented Programming-3.9-126
+1601681010-Software Technologies And Design-1-1a-Introduction to Programming with C#-4.14-123
+1601681010-Software Technologies And Design-1-1a-Introduction to IT-5.25-124
+1601681010-Software Technologies And Design-1-1a-English-6-134
+1601681010-Software Technologies And Design-1-1a-Graphic Design-5-125
+1601681010-Software Technologies And Design-1-1a-Sport-6-200
+1601681010-Software Technologies And Design-1-1a-Object Oriented Programming-5.65-126
+1601681089-Software Technologies And Design-1-1a-Introduction to Programming with C#-5.4-123
+1601681089-Software Technologies And Design-1-1a-Introduction to IT-5.5-124
+1601681089-Software Technologies And Design-1-1a-English-4-134
+1601681089-Software Technologies And Design-1-1a-Graphic Design-3.67-125
+1601681089-Software Technologies And Design-1-1a-Sport-6-200
+1601681089-Software Technologies And Design-1-1a-Object Oriented Programming-3.75-126
+1501681049-Software Technologies And Design-2-2a-Event Programming-6-124
+1501681049-Software Technologies And Design-2-2a-Geometric Design-5-129
+1501681049-Software Technologies And Design-2-2a-Databases-5.5-126
+1501681059-Software Technologies And Design-2-2a-Event Programming-3.99-124
+1501681059-Software Technologies And Design-2-2a-Geometric Design-4.5-129
+1501681059-Software Technologies And Design-2-2a-Databases-4.22-126
+1401681001-Software Technologies And Design-3-1a-Vector Images-5.21-126
+1401681001-Software Technologies And Design-3-1a-Design Of Mobile Applications-5.39-123
+1401681050-Software Technologies And Design-3-1a-Vector Images-5.76-126
+1401681050-Software Technologies And Design-3-1a-Design Of Mobile Applications-5.75-123
+1401681051-Software Technologies And Design-3-1a-Vector Images-5.56-126
+1401681051-Software Technologies And Design-3-1a-Design Of Mobile Applications-6-123
+1301681089-Software Technologies And Design-4-3b-Design Of 3D Models-5.9-126
+1301681089-Software Technologies And Design-4-3b-Framework Systems For Web Programming-3.44-126
+1301681089-Software Technologies And Design-4-3b-Design Of 3D Models-5-126
+1301681089-Software Technologies And Design-4-3b-Framework Systems For Web Programming-4.9-126
