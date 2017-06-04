@@ -37,6 +37,9 @@
             this.lbDisciplinesTaught = new System.Windows.Forms.ListBox();
             this.pbLecturerPic = new System.Windows.Forms.PictureBox();
             this.tabLecturerStudentAssessments = new System.Windows.Forms.TabPage();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.tbSpecialty = new System.Windows.Forms.TextBox();
+            this.lblDisciplineTxt = new System.Windows.Forms.Label();
             this.lblGradeTxt = new System.Windows.Forms.Label();
             this.tbFacNumber = new System.Windows.Forms.TextBox();
             this.lbGrades = new System.Windows.Forms.ListBox();
@@ -45,9 +48,6 @@
             this.tab = new System.Windows.Forms.TabPage();
             this.pbLecturerWorkSchedule = new System.Windows.Forms.PictureBox();
             this.btnLogOutStudent = new System.Windows.Forms.Button();
-            this.tbSpecialty = new System.Windows.Forms.TextBox();
-            this.lblDisciplineTxt = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.tabLecturer.SuspendLayout();
             this.tabLecturerHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLecturerPic)).BeginInit();
@@ -234,6 +234,39 @@
             this.tabLecturerStudentAssessments.TabIndex = 1;
             this.tabLecturerStudentAssessments.Text = "Student Assessments";
             // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.LightGray;
+            this.btnEdit.Enabled = false;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(176, 52);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(325, 57);
+            this.btnEdit.TabIndex = 17;
+            this.btnEdit.Text = "Edit Grade";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // tbSpecialty
+            // 
+            this.tbSpecialty.BackColor = System.Drawing.Color.White;
+            this.tbSpecialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSpecialty.Location = new System.Drawing.Point(311, 19);
+            this.tbSpecialty.Name = "tbSpecialty";
+            this.tbSpecialty.ReadOnly = true;
+            this.tbSpecialty.Size = new System.Drawing.Size(229, 21);
+            this.tbSpecialty.TabIndex = 6;
+            // 
+            // lblDisciplineTxt
+            // 
+            this.lblDisciplineTxt.AutoSize = true;
+            this.lblDisciplineTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisciplineTxt.Location = new System.Drawing.Point(239, 24);
+            this.lblDisciplineTxt.Name = "lblDisciplineTxt";
+            this.lblDisciplineTxt.Size = new System.Drawing.Size(66, 13);
+            this.lblDisciplineTxt.TabIndex = 5;
+            this.lblDisciplineTxt.Text = "Discipline:";
+            // 
             // lblGradeTxt
             // 
             this.lblGradeTxt.AutoSize = true;
@@ -319,39 +352,6 @@
             this.btnLogOutStudent.Text = "Log Out";
             this.btnLogOutStudent.UseVisualStyleBackColor = false;
             this.btnLogOutStudent.Click += new System.EventHandler(this.btnLogOutStudent_Click);
-            // 
-            // tbSpecialty
-            // 
-            this.tbSpecialty.BackColor = System.Drawing.Color.White;
-            this.tbSpecialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSpecialty.Location = new System.Drawing.Point(311, 19);
-            this.tbSpecialty.Name = "tbSpecialty";
-            this.tbSpecialty.ReadOnly = true;
-            this.tbSpecialty.Size = new System.Drawing.Size(229, 21);
-            this.tbSpecialty.TabIndex = 6;
-            // 
-            // lblDisciplineTxt
-            // 
-            this.lblDisciplineTxt.AutoSize = true;
-            this.lblDisciplineTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisciplineTxt.Location = new System.Drawing.Point(239, 24);
-            this.lblDisciplineTxt.Name = "lblDisciplineTxt";
-            this.lblDisciplineTxt.Size = new System.Drawing.Size(66, 13);
-            this.lblDisciplineTxt.TabIndex = 5;
-            this.lblDisciplineTxt.Text = "Discipline:";
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.LightGray;
-            this.btnEdit.Enabled = false;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(176, 52);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(325, 57);
-            this.btnEdit.TabIndex = 17;
-            this.btnEdit.Text = "Edit Grade";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // LecturerWindow
             // 

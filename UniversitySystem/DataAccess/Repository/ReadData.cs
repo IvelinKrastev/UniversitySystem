@@ -233,18 +233,21 @@ namespace DataAccess.Repository
                     {
                         string[] split = reader.ReadLine().Split('-');
 
-                        if (split[6].Equals(workNumber))
+                        if (split.Length == 7)
                         {
-                            Grades g = new Grades();
+                            if (split[6].Equals(workNumber))
+                            {
+                                Grades g = new Grades();
 
-                            g.FacultyNumberOfStudent = split[0];
-                            g.Specialty = split[1];
-                            g.Course = byte.Parse(split[2]);
-                            g.Group = split[3];
-                            g.DisciplineName = split[4];
-                            g.Grade = split[5];
+                                g.FacultyNumberOfStudent = split[0];
+                                g.Specialty = split[1];
+                                g.Course = byte.Parse(split[2]);
+                                g.Group = split[3];
+                                g.DisciplineName = split[4];
+                                g.Grade = split[5];
 
-                            grades.Add(g);
+                                grades.Add(g);
+                            }
                         }
                     }
                 }
