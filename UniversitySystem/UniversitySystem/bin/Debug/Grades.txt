@@ -1,6 +1,6 @@
 1601681009-Software Technologies And Design-1-1a-Introduction to Programming with C#-6-123
 1601681009-Software Technologies And Design-1-1a-Introduction to IT-4.24-124
-1601681009-Software Technologies And Design-1-1a-English-4.84-134
+1601681009-Software Technologies And Design-1-1a-English-5-134
 1601681009-Software Technologies And Design-1-1a-Graphic Design-5-125
 1601681009-Software Technologies And Design-1-1a-Sport-3-200
 1601681009-Software Technologies And Design-1-1a-Object Oriented Programming-3.9-126
@@ -32,3 +32,4 @@
 1301681089-Software Technologies And Design-4-3b-Framework Systems For Web Programming-3.44-126
 1301681089-Software Technologies And Design-4-3b-Design Of 3D Models-5-126
 1301681089-Software Technologies And Design-4-3b-Framework Systems For Web Programming-4.9-126
+6

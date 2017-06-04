@@ -95,7 +95,10 @@ namespace UniversitySystem.Forms
 
                     lbGrades.Items.Clear();
                     ShowGrades(grades);
-                    lbGrades.SelectedIndex = index;
+
+                    tbFacNumber.Text = "";
+                    tbSpecialty.Text = "";
+                    tbGrade.Text = "";
                 }
                 else
                 {
