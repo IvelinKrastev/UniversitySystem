@@ -53,18 +53,18 @@ namespace UniversitySystem.Forms
             if (index != -1)
             {
                 newGrade.FacultyNumberOfStudent = grades[lbGrades.SelectedIndex].FacultyNumberOfStudent;
-                newGrade.Specialty = grades[lbGrades.SelectedIndex].Specialty;
+                newGrade.DisciplineName = grades[lbGrades.SelectedIndex].DisciplineName;
                 newGrade.Grade = grades[lbGrades.SelectedIndex].Grade;
 
                 tbFacNumber.Text = newGrade.FacultyNumberOfStudent;
-                tbSpecialty.Text = newGrade.Specialty;
+                tbDiscipline.Text = newGrade.DisciplineName;
                 tbGrade.Text = newGrade.Grade;
 
                 btnEdit.Enabled = true;
             }
             else
             {
-                tbSpecialty.Text = "";
+                tbDiscipline.Text = "";
                 tbGrade.Text = "";
 
                 btnEdit.Enabled = false;
@@ -99,7 +99,7 @@ namespace UniversitySystem.Forms
                     ShowGrades(grades);
 
                     tbFacNumber.Text = "";
-                    tbSpecialty.Text = "";
+                    tbDiscipline.Text = "";
                     tbGrade.Text = "";
 
                     btnEdit.Enabled = false;

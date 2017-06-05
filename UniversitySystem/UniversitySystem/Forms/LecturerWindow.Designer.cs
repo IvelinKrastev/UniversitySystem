@@ -38,7 +38,7 @@
             this.pbLecturerPic = new System.Windows.Forms.PictureBox();
             this.tabLecturerStudentAssessments = new System.Windows.Forms.TabPage();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.tbSpecialty = new System.Windows.Forms.TextBox();
+            this.tbDiscipline = new System.Windows.Forms.TextBox();
             this.lblDisciplineTxt = new System.Windows.Forms.Label();
             this.lblGradeTxt = new System.Windows.Forms.Label();
             this.tbFacNumber = new System.Windows.Forms.TextBox();
@@ -220,7 +220,7 @@
             // 
             this.tabLecturerStudentAssessments.BackColor = System.Drawing.Color.Gainsboro;
             this.tabLecturerStudentAssessments.Controls.Add(this.btnEdit);
-            this.tabLecturerStudentAssessments.Controls.Add(this.tbSpecialty);
+            this.tabLecturerStudentAssessments.Controls.Add(this.tbDiscipline);
             this.tabLecturerStudentAssessments.Controls.Add(this.lblDisciplineTxt);
             this.tabLecturerStudentAssessments.Controls.Add(this.lblGradeTxt);
             this.tabLecturerStudentAssessments.Controls.Add(this.tbFacNumber);
@@ -247,15 +247,15 @@
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // tbSpecialty
+            // tbDiscipline
             // 
-            this.tbSpecialty.BackColor = System.Drawing.Color.White;
-            this.tbSpecialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSpecialty.Location = new System.Drawing.Point(311, 19);
-            this.tbSpecialty.Name = "tbSpecialty";
-            this.tbSpecialty.ReadOnly = true;
-            this.tbSpecialty.Size = new System.Drawing.Size(229, 21);
-            this.tbSpecialty.TabIndex = 6;
+            this.tbDiscipline.BackColor = System.Drawing.Color.White;
+            this.tbDiscipline.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDiscipline.Location = new System.Drawing.Point(311, 19);
+            this.tbDiscipline.Name = "tbDiscipline";
+            this.tbDiscipline.ReadOnly = true;
+            this.tbDiscipline.Size = new System.Drawing.Size(229, 21);
+            this.tbDiscipline.TabIndex = 6;
             // 
             // lblDisciplineTxt
             // 
@@ -297,6 +297,7 @@
             this.lbGrades.ItemHeight = 15;
             this.lbGrades.Location = new System.Drawing.Point(3, 115);
             this.lbGrades.Name = "lbGrades";
+            this.lbGrades.ScrollAlwaysVisible = true;
             this.lbGrades.Size = new System.Drawing.Size(679, 199);
             this.lbGrades.TabIndex = 2;
             this.lbGrades.SelectedIndexChanged += new System.EventHandler(this.lbGrades_SelectedIndexChanged);
@@ -407,7 +408,7 @@
         private System.Windows.Forms.Label lblDegree;
         private System.Windows.Forms.Label lblDegreeTxt;
         private System.Windows.Forms.PictureBox pbLecturerWorkSchedule;
-        private System.Windows.Forms.TextBox tbSpecialty;
+        private System.Windows.Forms.TextBox tbDiscipline;
         private System.Windows.Forms.Label lblDisciplineTxt;
         private System.Windows.Forms.Button btnEdit;
     }
